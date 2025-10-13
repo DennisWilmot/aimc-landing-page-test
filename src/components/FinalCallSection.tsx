@@ -2,16 +2,30 @@ import React from 'react';
 
 const FinalCallSection: React.FC = () => {
   return (
-    <section className="relative w-full bg-black py-16 px-4 sm:px-6 lg:px-8">
-      {/* Section Header */}
-      <div className="text-center mb-12">
-        <p className="text-sm font-semibold text-nyu-purple uppercase tracking-wide mb-4">
-          SOCIAL PROOF #1
-        </p>
+    <section className="relative w-full bg-black py-16 px-4 sm:px-6 lg:px-8 overflow-hidden">
+      {/* Video Background */}
+      <div className="absolute inset-0 z-0">
+        <video
+          className="h-full w-full object-cover"
+          autoPlay
+          muted
+          loop
+          playsInline
+        >
+          <source src="/HeroBackgroundVideo.mp4" type="video/mp4" />
+        </video>
+        
+        {/* Video Overlay */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/70 to-black/90" />
+        <div className="absolute inset-0 bg-gradient-to-r from-nyu-purple/20 to-transparent" />
+        {/* Top fade overlay for smooth transition from previous section */}
+        <div className="absolute inset-0 bg-gradient-to-b from-black/95 via-transparent to-transparent" style={{background: 'linear-gradient(to bottom, rgba(0,0,0,0.95) 0%, transparent 30%, transparent 100%)'}} />
+        {/* Bottom fade overlay for smooth transition to next section */}
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/95" style={{background: 'linear-gradient(to bottom, transparent 0%, transparent 70%, rgba(0,0,0,0.95) 100%)'}} />
       </div>
 
       {/* Two Column Layout */}
-      <div className="max-w-6xl mx-auto">
+      <div className="relative z-10 max-w-6xl mx-auto">
         <div className="flex flex-col lg:flex-row items-center gap-12">
           
           {/* Left Column - Text Content */}
@@ -66,10 +80,6 @@ const FinalCallSection: React.FC = () => {
                 </button>
               </div>
 
-              {/* Reduce FUDs Text */}
-              <p className="text-white/60 text-sm uppercase tracking-wide font-medium">
-                REDUCE FUDs (FEAR, UNCERTAINTY, DOUBTS)
-              </p>
             </div>
           </div>
 

@@ -1,15 +1,7 @@
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState } from 'react';
 
 const FAQSection: React.FC = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
-  const videoRef = useRef<HTMLVideoElement>(null);
-
-  useEffect(() => {
-    const video = videoRef.current;
-    if (video) {
-      video.play().catch(console.error);
-    }
-  }, []);
 
   const faqs = [
     {
@@ -43,33 +35,9 @@ const FAQSection: React.FC = () => {
   };
 
   return (
-    <section id="faq" className="relative w-full overflow-hidden bg-black py-16 px-4 sm:px-6 lg:px-8">
-      {/* Video Background */}
-      <div className="absolute inset-0 z-0">
-        <video
-          ref={videoRef}
-          className="h-full w-full object-cover"
-          autoPlay
-          muted
-          loop
-          playsInline
-          poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1920 1080'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%2357068c;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%23000000;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='1920' height='1080' fill='url(%23grad)'/%3E%3C/svg%3E"
-        >
-          {/* AI Masterclass FAQ Background Video */}
-          <source src="/HeroBackgroundVideo.mp4" type="video/mp4" />
-        </video>
-        
-        {/* Video Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-black/80" />
-        <div className="absolute inset-0 bg-gradient-to-r from-nyu-purple/30 to-transparent" />
-        {/* Top fade overlay for smooth transition from previous section */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/90 via-transparent to-transparent" style={{background: 'linear-gradient(to bottom, rgba(0,0,0,0.9) 0%, transparent 30%, transparent 100%)'}} />
-        {/* Bottom fade overlay for smooth transition to next section */}
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/90" style={{background: 'linear-gradient(to bottom, transparent 0%, transparent 70%, rgba(0,0,0,0.9) 100%)'}} />
-      </div>
-      
+    <section id="faq" className="relative w-full bg-black py-16 px-4 sm:px-6 lg:px-8">
       {/* Section Title */}
-      <div className="relative z-10 text-center mb-12">
+      <div className="text-center mb-12">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-nyu-light-violet-2 mb-4">
           Frequently Asked Questions
         </h2>
@@ -79,7 +47,7 @@ const FAQSection: React.FC = () => {
       </div>
 
       {/* FAQ Container */}
-      <div className="relative z-10 max-w-4xl mx-auto">
+      <div className="max-w-4xl mx-auto">
         <div className="bg-white/5 backdrop-blur-sm rounded-lg border border-white/20 p-8">
           <div className="space-y-0">
             {faqs.map((faq, index) => (
@@ -117,7 +85,7 @@ const FAQSection: React.FC = () => {
       </div>
 
       {/* Bottom CTA */}
-      <div className="relative z-10 text-center mt-12">
+      <div className="text-center mt-12">
         <button className="bg-nyu-purple hover:bg-nyu-purple/90 text-white px-8 py-4 rounded font-medium text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-nyu-purple/25">
           Have More Questions?
         </button>

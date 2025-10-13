@@ -55,10 +55,10 @@ const HeroSection: React.FC = () => {
         </video>
         
         {/* Video Overlay */}
-        <div className="absolute inset-0 bg-gradient-to-b from-black/20 via-black/40 to-black/80" />
-        <div className="absolute inset-0 bg-gradient-to-r from-nyu-purple/30 to-transparent" />
+        <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/70 to-black/90" />
+        <div className="absolute inset-0 bg-gradient-to-r from-nyu-purple/20 to-transparent" />
         {/* Bottom fade overlay for smooth transition */}
-        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/90" style={{background: 'linear-gradient(to bottom, transparent 0%, transparent 70%, rgba(0,0,0,0.9) 100%)'}} />
+        <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/95" style={{background: 'linear-gradient(to bottom, transparent 0%, transparent 70%, rgba(0,0,0,0.95) 100%)'}} />
       </div>
 
       {/* Navigation */}
@@ -110,8 +110,23 @@ const HeroSection: React.FC = () => {
       {/* Hero Content */}
       <div className="relative z-10 flex items-start min-h-screen px-4 sm:px-6 lg:px-8 pt-6 pb-16">
         <div className="flex flex-col lg:flex-row w-full items-start min-h-full">
-          {/* Left Content */}
-          <div className="w-full lg:w-1/2 text-center lg:text-left max-w-2xl lg:pr-8">
+          {/* Desktop Video - Shows only on desktop (LEFT COLUMN) */}
+          <div className="hidden lg:flex w-1/2 items-center justify-center pr-8 pt-8">
+            <div className="relative w-full max-w-xs aspect-[9/16] bg-black/20 backdrop-blur-sm rounded-lg border border-nyu-purple/20 shadow-lg shadow-nyu-purple/10 flex items-center justify-center">
+              <div className="text-center">
+                <div className="w-16 h-16 mx-auto mb-4 bg-nyu-purple/20 rounded-full flex items-center justify-center">
+                  <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
+                    <path d="M8 5v14l11-7z"/>
+                  </svg>
+                </div>
+                <p className="text-white/80 text-sm">Video Placeholder</p>
+                <p className="text-white/60 text-xs mt-1">Coming Soon</p>
+              </div>
+            </div>
+          </div>
+
+          {/* Right Content (TEXT COLUMN) */}
+          <div className="w-full lg:w-1/2 text-center lg:text-left max-w-2xl lg:pl-8">
 
           {/* Main Headline */}
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 animate-slide-up">
@@ -166,20 +181,6 @@ const HeroSection: React.FC = () => {
           </div>
           </div>
 
-          {/* Desktop Video - Shows only on desktop */}
-          <div className="hidden lg:flex w-1/2 items-center justify-center pl-8 pt-8">
-            <div className="relative w-full max-w-xs aspect-[9/16] bg-black/20 backdrop-blur-sm rounded-lg border border-nyu-purple/20 shadow-lg shadow-nyu-purple/10 flex items-center justify-center">
-              <div className="text-center">
-                <div className="w-16 h-16 mx-auto mb-4 bg-nyu-purple/20 rounded-full flex items-center justify-center">
-                  <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M8 5v14l11-7z"/>
-                  </svg>
-                </div>
-                <p className="text-white/80 text-sm">Video Placeholder</p>
-                <p className="text-white/60 text-xs mt-1">Coming Soon</p>
-              </div>
-            </div>
-          </div>
         </div>
       </div>
 

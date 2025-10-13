@@ -35,3 +35,13 @@ code {
 ::-webkit-scrollbar-thumb:hover {
   background: #6b0a9c;
 }
+
+/* Hide scrollbar for carousels */
+.scrollbar-hide {
+  -ms-overflow-style: none;  /* IE and Edge */
+  scrollbar-width: none;  /* Firefox */
+}
+
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;  /* Chrome, Safari and Opera */
+}
