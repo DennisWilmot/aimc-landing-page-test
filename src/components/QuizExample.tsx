@@ -211,17 +211,6 @@ const QuizExample: React.FC = () => {
                   </div>
                 </div>
 
-                {/* Individual Question Feedback */}
-                {showResults && (
-                  <div className={`
-                    mt-4 ml-14 p-4 rounded-lg
-                    ${isCorrect ? 'bg-green-50 border-l-4 border-green-500' : 'bg-red-50 border-l-4 border-red-500'}
-                  `}>
-                    <p className={`font-semibold ${isCorrect ? 'text-green-800' : 'text-red-800'}`}>
-                      {isCorrect ? '✓ Correct!' : '✗ Incorrect'}
-                    </p>
-                  </div>
-                )}
               </div>
             );
           })}
