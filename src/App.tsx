@@ -1,4 +1,5 @@
 import React from 'react';
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
 import HeroSection from './components/HeroSection';
 import WhatYouGetSection from './components/WhatYouGetSection';
 import AIMasterclassTVSection from './components/AIMasterclassTVSection';
@@ -11,8 +12,9 @@ import ImagePreviews from './components/ImagePreviews';
 import FAQSection from './components/FAQSection';
 import FinalCallSection from './components/FinalCallSection';
 import Footer from './components/Footer';
+import QuizExample from './components/QuizExample';
 
-function App() {
+function LandingPage() {
   return (
     <div className="App">
       <HeroSection />
@@ -28,6 +30,17 @@ function App() {
       <FinalCallSection />
       <Footer />
     </div>
+  );
+}
+
+function App() {
+  return (
+    <Router>
+      <Routes>
+        <Route path="/" element={<LandingPage />} />
+        <Route path="/quiz" element={<QuizExample />} />
+      </Routes>
+    </Router>
   );
 }
 
