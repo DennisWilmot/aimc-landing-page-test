@@ -62,7 +62,7 @@ const HeroSection: React.FC = () => {
       </div>
 
       {/* Navigation */}
-      <nav className="relative z-10 flex items-center justify-between px-4 sm:px-6 lg:px-8 bg-black/60 backdrop-blur-md border-b border-white/10 h-[11.11vh]">
+      <nav className="relative z-10 flex items-center justify-between px-4 sm:px-6 lg:px-8 bg-black/60 backdrop-blur-md border-b border-nyu-purple/15 h-[11.11vh]">
         <div className="flex items-center space-x-4">
           <img 
             src="/AIMC_Angled_Horiz_w Title_Violet.png" 
@@ -84,7 +84,7 @@ const HeroSection: React.FC = () => {
       </nav>
 
       {/* Floating Navbar - Appears on scroll up */}
-      <nav className={`fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-4 sm:px-6 lg:px-8 bg-black/80 backdrop-blur-md border-b border-white/10 h-[11.11vh] transition-transform duration-300 ${
+      <nav className={`fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-4 sm:px-6 lg:px-8 bg-black/80 backdrop-blur-md border-b border-nyu-purple/15 h-[11.11vh] transition-transform duration-300 ${
         showNavbar ? 'translate-y-0' : '-translate-y-full'
       }`}>
         <div className="flex items-center space-x-4">
@@ -114,16 +114,16 @@ const HeroSection: React.FC = () => {
           <div className="w-full lg:w-1/2 text-center lg:text-left max-w-2xl lg:pr-8">
 
           {/* Main Headline */}
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-nyu-light-violet-2 mb-4 animate-slide-up">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 animate-slide-up">
             <span className="block">AI Masterclass</span>
             <span className="block">
-              Executive Education
+              Executive Education (Free Online)
             </span>
           </h1>
 
           {/* Subtitle */}
-          <p className="text-lg sm:text-xl md:text-2xl text-white/80 mb-6 max-w-2xl leading-relaxed animate-slide-up">
-            Start with our complimentary online program, then choose your path to mastery
+          <p className="text-lg sm:text-xl md:text-2xl text-white/90 mb-6 max-w-2xl leading-relaxed animate-slide-up">
+            Start with our complimentary online program. Upgrade anytime to the Full Online Masterclass or the Intensive In-Person Experience.
           </p>
 
           {/* CTA Button */}
@@ -133,16 +133,9 @@ const HeroSection: React.FC = () => {
             </button>
           </div>
 
-          {/* Upgrade Path Text */}
-          <div className="mt-4 animate-slide-up">
-            <p className="text-white/60 text-sm sm:text-base">
-              Then upgrade to <span className="text-nyu-light-violet-2 font-medium">Online Masterclass</span> or <span className="text-nyu-light-violet-2 font-medium">Intensive In-Person Experience</span>
-            </p>
-          </div>
-
           {/* Mobile Video - Shows only on mobile */}
           <div className="w-full lg:hidden flex items-center justify-center pt-8">
-            <div className="relative w-full max-w-md aspect-[9/16] bg-black/20 backdrop-blur-sm rounded-lg border border-white/20 flex items-center justify-center">
+            <div className="relative w-full max-w-md aspect-[9/16] bg-black/20 backdrop-blur-sm rounded-lg border border-nyu-purple/20 shadow-lg shadow-nyu-purple/10 flex items-center justify-center">
               <div className="text-center">
                 <div className="w-16 h-16 mx-auto mb-4 bg-nyu-purple/20 rounded-full flex items-center justify-center">
                   <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
@@ -152,22 +145,6 @@ const HeroSection: React.FC = () => {
                 <p className="text-white/80 text-sm">Video Placeholder</p>
                 <p className="text-white/60 text-xs mt-1">Coming Soon</p>
               </div>
-            </div>
-          </div>
-
-          {/* Stats */}
-          <div className="mt-12 grid grid-cols-1 sm:grid-cols-3 gap-6 max-w-2xl animate-fade-in">
-            <div className="text-center lg:text-left">
-              <div className="text-3xl sm:text-4xl font-bold text-nyu-light-violet-2 mb-2">2</div>
-              <div className="text-white/70 text-sm sm:text-base">Two Day Intensive Learning and Workshops</div>
-            </div>
-            <div className="text-center lg:text-left">
-              <div className="text-3xl sm:text-4xl font-bold text-nyu-light-violet-2 mb-2">50+</div>
-              <div className="text-white/70 text-sm sm:text-base">Completed by 50 Fortune 500 Executives</div>
-            </div>
-            <div className="text-center lg:text-left">
-              <div className="text-3xl sm:text-4xl font-bold text-nyu-light-violet-2 mb-2">100%</div>
-              <div className="text-white/70 text-sm sm:text-base">Online Learning</div>
             </div>
           </div>
 
@@ -191,7 +168,7 @@ const HeroSection: React.FC = () => {
 
           {/* Desktop Video - Shows only on desktop */}
           <div className="hidden lg:flex w-1/2 items-center justify-center pl-8 pt-8">
-            <div className="relative w-full max-w-xs aspect-[9/16] bg-black/20 backdrop-blur-sm rounded-lg border border-white/20 flex items-center justify-center">
+            <div className="relative w-full max-w-xs aspect-[9/16] bg-black/20 backdrop-blur-sm rounded-lg border border-nyu-purple/20 shadow-lg shadow-nyu-purple/10 flex items-center justify-center">
               <div className="text-center">
                 <div className="w-16 h-16 mx-auto mb-4 bg-nyu-purple/20 rounded-full flex items-center justify-center">
                   <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
