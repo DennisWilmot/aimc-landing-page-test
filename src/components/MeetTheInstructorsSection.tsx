@@ -23,7 +23,7 @@ const MeetTheInstructorsSection: React.FC = () => {
             <div className="relative w-48 h-48 mb-6">
               <div className="w-full h-full rounded-full overflow-hidden border-4 border-nyu-purple/20 shadow-lg shadow-nyu-purple/20">
                 <img 
-                  src="/Ed Watal Intellibus Headshot.jpg" 
+                  src="/Ed_Watal.jpg" 
                   alt="Ed Watal" 
                   className="w-full h-full object-cover"
                 />
