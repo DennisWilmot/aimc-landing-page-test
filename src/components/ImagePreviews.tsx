@@ -3,32 +3,57 @@ import React, { useState, useEffect } from 'react';
 const ImagePreviews: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
 
-  // Placeholder images - replace with actual course images
+  // Course images from AI Masterclass events
   const courseImages = [
     {
-      src: "https://images.unsplash.com/photo-1516321318423-f06f85e504b3?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-      alt: "Executive learning session",
+      src: "https://landing-page-media-540334252609.s3.us-east-2.amazonaws.com/Day-1-Dinner.avif",
+      alt: "Day 1 dinner networking",
+      caption: "Day 1 Executive Dinner & Networking"
+    },
+    {
+      src: "https://landing-page-media-540334252609.s3.us-east-2.amazonaws.com/Day-2-Networking.avif",
+      alt: "Day 2 networking session",
+      caption: "Day 2 Networking & Collaboration"
+    },
+    {
+      src: "https://landing-page-media-540334252609.s3.us-east-2.amazonaws.com/EAC_AI-MASTERCLASS_D1-003.avif",
+      alt: "AI Masterclass Day 1 session",
       caption: "Interactive AI Strategy Workshop"
     },
     {
-      src: "https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-      alt: "Executive networking",
-      caption: "Executive Networking & Collaboration"
+      src: "https://landing-page-media-540334252609.s3.us-east-2.amazonaws.com/EAC_AI-MASTERCLASS_D1-008.avif",
+      alt: "AI Masterclass Day 1 presentation",
+      caption: "Executive Learning & Insights"
     },
     {
-      src: "https://images.unsplash.com/photo-1556761175-b413da4baf72?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2074&q=80",
-      alt: "Boardroom presentation",
-      caption: "AI Implementation Planning"
+      src: "https://landing-page-media-540334252609.s3.us-east-2.amazonaws.com/EAC_AI-MASTERCLASS_D1-017.avif",
+      alt: "AI Masterclass Day 1 workshop",
+      caption: "Hands-On AI Implementation"
     },
     {
-      src: "https://images.unsplash.com/photo-1559136555-9303baea8ebd?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-      alt: "Executive discussion",
+      src: "https://landing-page-media-540334252609.s3.us-east-2.amazonaws.com/EAC_AI-MASTERCLASS_D1-018.avif",
+      alt: "AI Masterclass Day 1 collaboration",
       caption: "Peer-to-Peer Learning Sessions"
     },
     {
-      src: "https://images.unsplash.com/photo-1521737711867-e3b97375f902?ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D&auto=format&fit=crop&w=2070&q=80",
-      alt: "NYU campus setting",
-      caption: "NYU Executive Education Campus"
+      src: "https://landing-page-media-540334252609.s3.us-east-2.amazonaws.com/EAC_AI-MASTERCLASS_D1-158.avif",
+      alt: "AI Masterclass Day 1 discussion",
+      caption: "Strategic AI Planning & Discussion"
+    },
+    {
+      src: "https://landing-page-media-540334252609.s3.us-east-2.amazonaws.com/EAC_AI-MASTERCLASS_D2-27.avif",
+      alt: "AI Masterclass Day 2 session",
+      caption: "Advanced AI Strategy Implementation"
+    },
+    {
+      src: "https://landing-page-media-540334252609.s3.us-east-2.amazonaws.com/EAC_AI-MASTERCLASS_D2-72.avif",
+      alt: "AI Masterclass Day 2 workshop",
+      caption: "Real-World Case Studies & Analysis"
+    },
+    {
+      src: "https://landing-page-media-540334252609.s3.us-east-2.amazonaws.com/EAC_AI-MASTERCLASS_D2-76.avif",
+      alt: "AI Masterclass Day 2 finale",
+      caption: "Executive Capstone & Takeaways"
     }
   ];
 
