@@ -19,14 +19,14 @@ const MeetTheInstructorsSection: React.FC = () => {
           
           {/* Instructor 1 - Ed Watal */}
           <div className="flex flex-col items-center text-left">
-            {/* Circular Image Placeholder */}
+            {/* Instructor Photo */}
             <div className="relative w-48 h-48 mb-6">
-              <div className="w-full h-full rounded-full bg-gray-200/20 backdrop-blur-sm border border-nyu-purple/20 flex items-center justify-center shadow-lg shadow-nyu-purple/20">
-                <div className="w-20 h-20 bg-nyu-purple/20 rounded-full flex items-center justify-center">
-                  <svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-                  </svg>
-                </div>
+              <div className="w-full h-full rounded-full overflow-hidden border-4 border-nyu-purple/20 shadow-lg shadow-nyu-purple/20">
+                <img 
+                  src="/Ed Watal Intellibus Headshot.jpg" 
+                  alt="Ed Watal" 
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
             
@@ -59,14 +59,14 @@ const MeetTheInstructorsSection: React.FC = () => {
 
           {/* Instructor 2 - Jepson Taylor */}
           <div className="flex flex-col items-center text-left">
-            {/* Circular Image Placeholder */}
+            {/* Instructor Photo */}
             <div className="relative w-48 h-48 mb-6">
-              <div className="w-full h-full rounded-full bg-gray-200/20 backdrop-blur-sm border border-nyu-purple/20 flex items-center justify-center shadow-lg shadow-nyu-purple/20">
-                <div className="w-20 h-20 bg-nyu-purple/20 rounded-full flex items-center justify-center">
-                  <svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z"/>
-                  </svg>
-                </div>
+              <div className="w-full h-full rounded-full overflow-hidden border-4 border-nyu-purple/20 shadow-lg shadow-nyu-purple/20">
+                <img 
+                  src="/jepson_taylor_headshot-1-e1705937899982.jpg" 
+                  alt="Jepson Taylor" 
+                  className="w-full h-full object-cover"
+                />
               </div>
             </div>
             
