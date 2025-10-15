@@ -37,71 +37,65 @@ const SocialProofSection: React.FC = () => {
       {/* Video Grid */}
       <div className="relative z-10 max-w-6xl mx-auto">
         <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Video 1 */}
+          {/* Video 1 - Ayan Bhattacharya */}
           <div className="flex flex-col items-center">
             <div className="relative w-full aspect-[9/16] max-w-sm bg-black/20 backdrop-blur-sm rounded-lg border border-nyu-purple/20 shadow-lg shadow-nyu-purple/10 mb-4 overflow-hidden">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-16 h-16 mx-auto mb-4 bg-nyu-purple/20 rounded-full flex items-center justify-center">
-                    <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M8 5v14l11-7z"/>
-                    </svg>
-                  </div>
-                  <p className="text-white/80 text-sm">Alumni Video 1</p>
-                  <p className="text-white/60 text-xs mt-1">Coming Soon</p>
-                </div>
-              </div>
+              <iframe
+                src="https://player.mux.com/YlIB7SgfglvXI6iYW1GUcYylbB4X9pCZh8YmEK8OQcU?metadata-video-title=Ayan+Testimonial+FT+2024+Short&video-title=Ayan+Testimonial+FT+2024+Short"
+                style={{width: '100%', height: '100%', border: 'none'}}
+                allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+                allowFullScreen
+                title="Ayan Bhattacharya Testimonial"
+              />
             </div>
             
             {/* Alumni Card */}
             <div className="bg-white/5 backdrop-blur-sm rounded-lg border border-nyu-purple/15 p-6 w-full max-w-sm text-center">
-              <h3 className="text-white font-semibold text-lg mb-2">Sarah Chen • CTO • Tech Corp</h3>
-              <p className="text-white/80 text-sm mt-3">"The AI Masterclass transformed how I approach technology strategy in our organization."</p>
+              <h3 className="text-white font-semibold text-lg mb-2">Ayan Bhattacharya</h3>
+              <p className="text-white/70 text-sm mb-2">Vice President Generative AI Practice Leader</p>
+              <p className="text-white/60 text-sm mb-3">CAPGEMINI</p>
+              <p className="text-white/80 text-sm mt-3">"The AI Masterclass provided invaluable insights into strategic AI implementation and governance frameworks."</p>
             </div>
           </div>
 
-          {/* Video 2 */}
+          {/* Video 2 - Chen Wang */}
           <div className="flex flex-col items-center">
             <div className="relative w-full aspect-[9/16] max-w-sm bg-black/20 backdrop-blur-sm rounded-lg border border-nyu-purple/20 shadow-lg shadow-nyu-purple/10 mb-4 overflow-hidden">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-16 h-16 mx-auto mb-4 bg-nyu-purple/20 rounded-full flex items-center justify-center">
-                    <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M8 5v14l11-7z"/>
-                    </svg>
-                  </div>
-                  <p className="text-white/80 text-sm">Alumni Video 2</p>
-                  <p className="text-white/60 text-xs mt-1">Coming Soon</p>
-                </div>
-              </div>
+              <iframe
+                src="https://player.mux.com/6wLyiDCnfz02EGGLKUHqugfwQ00J9G6R01wEHFG37lRhIs?metadata-video-title=Chen+Testimonial+FT+2024+Short+&video-title=Chen+Testimonial+FT+2024+Short+"
+                style={{width: '100%', height: '100%', border: 'none'}}
+                allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+                allowFullScreen
+                title="Chen Wang Testimonial"
+              />
             </div>
             
             {/* Alumni Card */}
             <div className="bg-white/5 backdrop-blur-sm rounded-lg border border-nyu-purple/15 p-6 w-full max-w-sm text-center">
-              <h3 className="text-white font-semibold text-lg mb-2">Michael Rodriguez • VP Digital Innovation • Global Corp</h3>
+              <h3 className="text-white font-semibold text-lg mb-2">Chen Wang</h3>
+              <p className="text-white/70 text-sm mb-2">Lead Alliance Solution Architect</p>
+              <p className="text-white/60 text-sm mb-3">AI21 LABS</p>
               <p className="text-white/80 text-sm mt-3">"This program gave me the confidence to lead AI initiatives across our global operations."</p>
             </div>
           </div>
 
-          {/* Video 3 */}
+          {/* Video 3 - Dinesh Moorjani */}
           <div className="flex flex-col items-center">
             <div className="relative w-full aspect-[9/16] max-w-sm bg-black/20 backdrop-blur-sm rounded-lg border border-nyu-purple/20 shadow-lg shadow-nyu-purple/10 mb-4 overflow-hidden">
-              <div className="absolute inset-0 flex items-center justify-center">
-                <div className="text-center">
-                  <div className="w-16 h-16 mx-auto mb-4 bg-nyu-purple/20 rounded-full flex items-center justify-center">
-                    <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                      <path d="M8 5v14l11-7z"/>
-                    </svg>
-                  </div>
-                  <p className="text-white/80 text-sm">Alumni Video 3</p>
-                  <p className="text-white/60 text-xs mt-1">Coming Soon</p>
-                </div>
-              </div>
+              <iframe
+                src="https://player.mux.com/HpIigzK4vJXETHPzaZdtVxm7399uHkGbmmAa00JNqtfA?metadata-video-title=Dinesh+Testimonial+FT+2024+Short&video-title=Dinesh+Testimonial+FT+2024+Short"
+                style={{width: '100%', height: '100%', border: 'none'}}
+                allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+                allowFullScreen
+                title="Dinesh Moorjani Testimonial"
+              />
             </div>
             
             {/* Alumni Card */}
             <div className="bg-white/5 backdrop-blur-sm rounded-lg border border-nyu-purple/15 p-6 w-full max-w-sm text-center">
-              <h3 className="text-white font-semibold text-lg mb-2">Dr. Emily Watson • Chief Data Officer • Enterprise Solutions</h3>
+              <h3 className="text-white font-semibold text-lg mb-2">Dinesh Moorjani</h3>
+              <p className="text-white/70 text-sm mb-2">Co Founder</p>
+              <p className="text-white/60 text-sm mb-3">TINDER</p>
               <p className="text-white/80 text-sm mt-3">"The practical applications and real-world case studies were invaluable for my role."</p>
             </div>
           </div>
