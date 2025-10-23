@@ -111,36 +111,30 @@ const AIMasterclassTVSection: React.FC = () => {
                 <p className="text-white/80 text-base mt-3 font-medium">Vinod Khosla on AI Investment</p>
               </div>
 
-              {/* Video Thumbnail 2 */}
+              {/* Video Thumbnail 2 - Naveen Jain */}
               <div className="group cursor-pointer flex-shrink-0 w-full sm:w-[calc(50%-1rem)] snap-center">
                 <div className="relative aspect-video bg-black/20 backdrop-blur-sm rounded-lg border-2 border-nyu-purple/20 hover:border-nyu-purple/40 transition-all duration-300 overflow-hidden">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-20 h-20 bg-nyu-purple/20 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                      <svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M8 5v14l11-7z"/>
-                      </svg>
-                    </div>
-                  </div>
-                  <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    <p className="text-white text-base font-medium">Preview</p>
-                  </div>
+                  <iframe
+                    src="https://player.mux.com/Pj9mtrHK02PCzm8wmxfUAtQzWPIVCQehgoRCQwinsvkk?metadata-video-title=Naveen+Jain+Snippet+1+FT+2024&video-title=Naveen+Jain+Snippet+1+FT+2024"
+                    style={{width: '100%', height: '100%', border: 'none'}}
+                    allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+                    allowFullScreen
+                    title="Naveen Jain Snippet 1 FT 2024"
+                  />
                 </div>
                 <p className="text-white/80 text-base mt-3 font-medium">Naveen Jain's AI Vision</p>
               </div>
 
-              {/* Video Thumbnail 3 */}
+              {/* Video Thumbnail 3 - Vibhav Prasad */}
               <div className="group cursor-pointer flex-shrink-0 w-full sm:w-[calc(50%-1rem)] snap-center">
                 <div className="relative aspect-video bg-black/20 backdrop-blur-sm rounded-lg border-2 border-nyu-purple/20 hover:border-nyu-purple/40 transition-all duration-300 overflow-hidden">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-20 h-20 bg-nyu-purple/20 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                      <svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M8 5v14l11-7z"/>
-                      </svg>
-                    </div>
-                  </div>
-                  <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    <p className="text-white text-base font-medium">Preview</p>
-                  </div>
+                  <iframe
+                    src="https://player.mux.com/7D02JeG6vvK7aiHgMU4YwtZ2jvFaF5DQLOrzRGIq2QmA?metadata-video-title=AIMC_+Testimonial_Vibhav_Prasad&video-title=AIMC_+Testimonial_Vibhav_Prasad"
+                    style={{width: '100%', height: '100%', border: 'none'}}
+                    allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+                    allowFullScreen
+                    title="AIMC Testimonial Vibhav Prasad"
+                  />
                 </div>
                 <p className="text-white/80 text-base mt-3 font-medium">Vibhav Prasad on Innovation</p>
               </div>
@@ -203,24 +197,67 @@ const AIMasterclassTVSection: React.FC = () => {
               className="flex gap-8 overflow-x-auto scrollbar-hide snap-x snap-mandatory pb-4"
               style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
             >
-              {/* Video Thumbnails for Executives */}
-              {['Jed Dougherty on AI Wins', 'Chen Wang on Risk Management', 'Ayan Bhattacharya on Trade-offs', 'Dan Shiebler on Implementation'].map((title, index) => (
-                <div key={index} className="group cursor-pointer flex-shrink-0 w-full sm:w-[calc(50%-1rem)] snap-center">
-                  <div className="relative aspect-video bg-black/20 backdrop-blur-sm rounded-lg border-2 border-nyu-purple/20 hover:border-nyu-purple/40 transition-all duration-300 overflow-hidden">
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="w-20 h-20 bg-nyu-purple/20 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                        <svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
-                          <path d="M8 5v14l11-7z"/>
-                        </svg>
-                      </div>
-                    </div>
-                    <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                      <p className="text-white text-base font-medium">Preview</p>
+              {/* Video Thumbnail 1 - Jed Dougherty */}
+              <div className="group cursor-pointer flex-shrink-0 w-full sm:w-[calc(50%-1rem)] snap-center">
+                <div className="relative aspect-video bg-black/20 backdrop-blur-sm rounded-lg border-2 border-nyu-purple/20 hover:border-nyu-purple/40 transition-all duration-300 overflow-hidden">
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="w-20 h-20 bg-nyu-purple/20 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                      <svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z"/>
+                      </svg>
                     </div>
                   </div>
-                  <p className="text-white/80 text-base mt-3 font-medium">{title}</p>
+                  <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <p className="text-white text-base font-medium">Preview</p>
+                  </div>
                 </div>
-              ))}
+                <p className="text-white/80 text-base mt-3 font-medium">Jed Dougherty on AI Wins</p>
+              </div>
+
+              {/* Video Thumbnail 2 - Chen Wang */}
+              <div className="group cursor-pointer flex-shrink-0 w-full sm:w-[calc(50%-1rem)] snap-center">
+                <div className="relative aspect-video bg-black/20 backdrop-blur-sm rounded-lg border-2 border-nyu-purple/20 hover:border-nyu-purple/40 transition-all duration-300 overflow-hidden">
+                  <iframe
+                    src="https://player.mux.com/Y4LXN02Sn2wT4tGPCCl8ndTowxmyOpRlc01Pp3vp9I01Ow?metadata-video-title=Chen+Testimonial+FT+2024&video-title=Chen+Testimonial+FT+2024"
+                    style={{width: '100%', height: '100%', border: 'none'}}
+                    allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+                    allowFullScreen
+                    title="Chen Testimonial FT 2024"
+                  />
+                </div>
+                <p className="text-white/80 text-base mt-3 font-medium">Chen Wang on Risk Management</p>
+              </div>
+
+              {/* Video Thumbnail 3 - Ayan Bhattacharya */}
+              <div className="group cursor-pointer flex-shrink-0 w-full sm:w-[calc(50%-1rem)] snap-center">
+                <div className="relative aspect-video bg-black/20 backdrop-blur-sm rounded-lg border-2 border-nyu-purple/20 hover:border-nyu-purple/40 transition-all duration-300 overflow-hidden">
+                  <iframe
+                    src="https://player.mux.com/khAWi00im02zhGyO1muiWwPoNr027PPVkW17Wpm9mtMySI?metadata-video-title=Ayan+Testimonial+FT+2024&video-title=Ayan+Testimonial+FT+2024"
+                    style={{width: '100%', height: '100%', border: 'none'}}
+                    allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+                    allowFullScreen
+                    title="Ayan Testimonial FT 2024"
+                  />
+                </div>
+                <p className="text-white/80 text-base mt-3 font-medium">Ayan Bhattacharya on Trade-offs</p>
+              </div>
+
+              {/* Video Thumbnail 4 - Dan Shiebler */}
+              <div className="group cursor-pointer flex-shrink-0 w-full sm:w-[calc(50%-1rem)] snap-center">
+                <div className="relative aspect-video bg-black/20 backdrop-blur-sm rounded-lg border-2 border-nyu-purple/20 hover:border-nyu-purple/40 transition-all duration-300 overflow-hidden">
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="w-20 h-20 bg-nyu-purple/20 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                      <svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z"/>
+                      </svg>
+                    </div>
+                  </div>
+                  <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <p className="text-white text-base font-medium">Preview</p>
+                  </div>
+                </div>
+                <p className="text-white/80 text-base mt-3 font-medium">Dan Shiebler on Implementation</p>
+              </div>
             </div>
           </div>
         </div>
@@ -263,24 +300,67 @@ const AIMasterclassTVSection: React.FC = () => {
               className="flex gap-8 overflow-x-auto scrollbar-hide snap-x snap-mandatory pb-4"
               style={{ scrollbarWidth: 'none', msOverflowStyle: 'none' }}
             >
-              {/* Video Thumbnails for Governance */}
-              {['Peggy Smyth on Boardroom Ethics', 'Ed Watal on Responsible AI', 'Seth Dobrin on Governance', 'Ethics in AI Scaling'].map((title, index) => (
-                <div key={index} className="group cursor-pointer flex-shrink-0 w-full sm:w-[calc(50%-1rem)] snap-center">
-                  <div className="relative aspect-video bg-black/20 backdrop-blur-sm rounded-lg border-2 border-nyu-purple/20 hover:border-nyu-purple/40 transition-all duration-300 overflow-hidden">
-                    <div className="absolute inset-0 flex items-center justify-center">
-                      <div className="w-20 h-20 bg-nyu-purple/20 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                        <svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
-                          <path d="M8 5v14l11-7z"/>
-                        </svg>
-                      </div>
-                    </div>
-                    <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                      <p className="text-white text-base font-medium">Preview</p>
+              {/* Video Thumbnail 1 - Peggy Smyth */}
+              <div className="group cursor-pointer flex-shrink-0 w-full sm:w-[calc(50%-1rem)] snap-center">
+                <div className="relative aspect-video bg-black/20 backdrop-blur-sm rounded-lg border-2 border-nyu-purple/20 hover:border-nyu-purple/40 transition-all duration-300 overflow-hidden">
+                  <iframe
+                    src="https://player.mux.com/g1fQlTUyd4mvNYzJOI4UQEK2S02HJkkc1byQ00iyMffF8?metadata-video-title=Peggy+Smyth+Testimonial&video-title=Peggy+Smyth+Testimonial"
+                    style={{width: '100%', height: '100%', border: 'none'}}
+                    allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+                    allowFullScreen
+                    title="Peggy Smyth Testimonial"
+                  />
+                </div>
+                <p className="text-white/80 text-base mt-3 font-medium">Peggy Smyth on Boardroom Ethics</p>
+              </div>
+
+              {/* Video Thumbnail 2 - Ed Watal */}
+              <div className="group cursor-pointer flex-shrink-0 w-full sm:w-[calc(50%-1rem)] snap-center">
+                <div className="relative aspect-video bg-black/20 backdrop-blur-sm rounded-lg border-2 border-nyu-purple/20 hover:border-nyu-purple/40 transition-all duration-300 overflow-hidden">
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="w-20 h-20 bg-nyu-purple/20 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                      <svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z"/>
+                      </svg>
                     </div>
                   </div>
-                  <p className="text-white/80 text-base mt-3 font-medium">{title}</p>
+                  <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <p className="text-white text-base font-medium">Preview</p>
+                  </div>
                 </div>
-              ))}
+                <p className="text-white/80 text-base mt-3 font-medium">Ed Watal on Responsible AI</p>
+              </div>
+
+              {/* Video Thumbnail 3 - Seth Dobrin */}
+              <div className="group cursor-pointer flex-shrink-0 w-full sm:w-[calc(50%-1rem)] snap-center">
+                <div className="relative aspect-video bg-black/20 backdrop-blur-sm rounded-lg border-2 border-nyu-purple/20 hover:border-nyu-purple/40 transition-all duration-300 overflow-hidden">
+                  <iframe
+                    src="https://player.mux.com/6KaQVo1WSolzvOrr1oLyP3cAIM5FX00zAY022hay4cga4?metadata-video-title=Seth+Dobrin+AIMC+Snippet+1&video-title=Seth+Dobrin+AIMC+Snippet+1"
+                    style={{width: '100%', height: '100%', border: 'none'}}
+                    allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+                    allowFullScreen
+                    title="Seth Dobrin AIMC Snippet 1"
+                  />
+                </div>
+                <p className="text-white/80 text-base mt-3 font-medium">Seth Dobrin on Governance</p>
+              </div>
+
+              {/* Video Thumbnail 4 - Ethics in AI Scaling */}
+              <div className="group cursor-pointer flex-shrink-0 w-full sm:w-[calc(50%-1rem)] snap-center">
+                <div className="relative aspect-video bg-black/20 backdrop-blur-sm rounded-lg border-2 border-nyu-purple/20 hover:border-nyu-purple/40 transition-all duration-300 overflow-hidden">
+                  <div className="absolute inset-0 flex items-center justify-center">
+                    <div className="w-20 h-20 bg-nyu-purple/20 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
+                      <svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
+                        <path d="M8 5v14l11-7z"/>
+                      </svg>
+                    </div>
+                  </div>
+                  <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
+                    <p className="text-white text-base font-medium">Preview</p>
+                  </div>
+                </div>
+                <p className="text-white/80 text-base mt-3 font-medium">Ethics in AI Scaling</p>
+              </div>
             </div>
           </div>
         </div>

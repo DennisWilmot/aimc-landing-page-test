@@ -112,16 +112,14 @@ const HeroSection: React.FC = () => {
         <div className="flex flex-col lg:flex-row w-full items-start min-h-full">
           {/* Desktop Video - Shows only on desktop (LEFT COLUMN) */}
           <div className="hidden lg:flex w-1/2 items-center justify-center pr-8 pt-8">
-            <div className="relative w-full max-w-xs aspect-[9/16] bg-black/20 backdrop-blur-sm rounded-lg border border-nyu-purple/20 shadow-lg shadow-nyu-purple/10 flex items-center justify-center">
-              <div className="text-center">
-                <div className="w-16 h-16 mx-auto mb-4 bg-nyu-purple/20 rounded-full flex items-center justify-center">
-                  <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M8 5v14l11-7z"/>
-                  </svg>
-                </div>
-                <p className="text-white/80 text-sm">Video Placeholder</p>
-                <p className="text-white/60 text-xs mt-1">Coming Soon</p>
-              </div>
+            <div className="relative w-full max-w-xs aspect-[9/16] bg-black/20 backdrop-blur-sm rounded-lg border border-nyu-purple/20 shadow-lg shadow-nyu-purple/10 overflow-hidden">
+              <iframe
+                src="https://player.mux.com/FQlNEHa3G90117sMdpV7cxXW8FGFZe34S8tEklf1xFDs?metadata-video-title=AIMC+Vertical+Testimonial+2025&video-title=AIMC+Vertical+Testimonial+2025"
+                style={{width: '100%', height: '100%', border: 'none'}}
+                allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+                allowFullScreen
+                title="AI Masterclass Vertical Testimonial 2025"
+              />
             </div>
           </div>
 
@@ -150,16 +148,14 @@ const HeroSection: React.FC = () => {
 
           {/* Mobile Video - Shows only on mobile */}
           <div className="w-full lg:hidden flex items-center justify-center pt-8">
-            <div className="relative w-full max-w-md aspect-[9/16] bg-black/20 backdrop-blur-sm rounded-lg border border-nyu-purple/20 shadow-lg shadow-nyu-purple/10 flex items-center justify-center">
-              <div className="text-center">
-                <div className="w-16 h-16 mx-auto mb-4 bg-nyu-purple/20 rounded-full flex items-center justify-center">
-                  <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M8 5v14l11-7z"/>
-                  </svg>
-                </div>
-                <p className="text-white/80 text-sm">Video Placeholder</p>
-                <p className="text-white/60 text-xs mt-1">Coming Soon</p>
-              </div>
+            <div className="relative w-full max-w-md aspect-[9/16] bg-black/20 backdrop-blur-sm rounded-lg border border-nyu-purple/20 shadow-lg shadow-nyu-purple/10 overflow-hidden">
+              <iframe
+                src="https://player.mux.com/FQlNEHa3G90117sMdpV7cxXW8FGFZe34S8tEklf1xFDs?metadata-video-title=AIMC+Vertical+Testimonial+2025&video-title=AIMC+Vertical+Testimonial+2025"
+                style={{width: '100%', height: '100%', border: 'none'}}
+                allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+                allowFullScreen
+                title="AI Masterclass Vertical Testimonial 2025"
+              />
             </div>
           </div>
 
