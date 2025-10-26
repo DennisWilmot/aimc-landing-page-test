@@ -43,16 +43,14 @@ const ValuePropositionSection: React.FC = () => {
         {/* Block 1: Image Left, Text Right */}
         <div className="flex flex-col lg:flex-row items-center gap-12">
           <div className="w-full lg:w-1/2">
-            <div className="relative w-full aspect-[4/3] bg-black/20 backdrop-blur-sm rounded-lg border-2 border-nyu-purple/20 shadow-lg shadow-nyu-purple/10 flex items-center justify-center">
-              <div className="text-center">
-                <div className="w-16 h-16 mx-auto mb-4 bg-nyu-purple/20 rounded-full flex items-center justify-center">
-                  <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M12 2l3.09 6.26L22 9.27l-5 4.87 1.18 6.88L12 17.77l-6.18 3.25L7 14.14 2 9.27l6.91-1.01L12 2z"/>
-                  </svg>
-                </div>
-                <p className="text-white/80 text-sm">Strategic AI Framework</p>
-                <p className="text-white/60 text-xs mt-1">Coming Soon</p>
-              </div>
+            <div className="relative w-full aspect-video bg-black/20 backdrop-blur-sm rounded-lg border-2 border-nyu-purple/20 shadow-lg shadow-nyu-purple/10 overflow-hidden">
+              <iframe
+                src="https://player.mux.com/2Tsv5wIfxTCs9nEvzAsKkBva8KjWlnCK7KY76f845gI?metadata-video-title=Balvinder+-+Chaos+to+Clarity+ST25&video-title=Balvinder+-+Chaos+to+Clarity+ST25"
+                style={{width: '100%', height: '100%', border: 'none'}}
+                allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+                allowFullScreen
+                title="Balvinder - Chaos to Clarity ST25"
+              />
             </div>
           </div>
           
@@ -74,16 +72,14 @@ const ValuePropositionSection: React.FC = () => {
         {/* Block 2: Text Left, Image Right */}
         <div className="flex flex-col lg:flex-row-reverse items-center gap-12">
           <div className="w-full lg:w-1/2">
-            <div className="relative w-full aspect-[4/3] bg-black/20 backdrop-blur-sm rounded-lg border-2 border-nyu-purple/20 shadow-lg shadow-nyu-purple/10 flex items-center justify-center">
-              <div className="text-center">
-                <div className="w-16 h-16 mx-auto mb-4 bg-nyu-purple/20 rounded-full flex items-center justify-center">
-                  <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-5 14H7v-2h7v2zm3-4H7v-2h10v2zm0-4H7V7h10v2z"/>
-                  </svg>
-                </div>
-                <p className="text-white/80 text-sm">Real-World Case Studies</p>
-                <p className="text-white/60 text-xs mt-1">Coming Soon</p>
-              </div>
+            <div className="relative w-full aspect-video bg-black/20 backdrop-blur-sm rounded-lg border-2 border-nyu-purple/20 shadow-lg shadow-nyu-purple/10 overflow-hidden">
+              <iframe
+                src="https://player.mux.com/XhjDhi75UrDiwTUtxPOe7LiBnQCGP5K02tUrRiMXQVYE?metadata-video-title=Naveen+Jain+Snippet+3+FT+2024&video-title=Naveen+Jain+Snippet+3+FT+2024"
+                style={{width: '100%', height: '100%', border: 'none'}}
+                allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+                allowFullScreen
+                title="Naveen Jain Snippet 3 FT 2024"
+              />
             </div>
           </div>
           
