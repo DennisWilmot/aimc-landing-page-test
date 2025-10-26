@@ -1,10 +1,12 @@
 import React, { useEffect, useRef, useState } from 'react';
 import { initializeSmoothScroll } from '../utils/smoothScroll';
+import { useNotification } from '../contexts/NotificationContext';
 
 const HeroSection: React.FC = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
   const [showNavbar, setShowNavbar] = useState(false);
   const [lastScrollY, setLastScrollY] = useState(0);
+  const { addNotification } = useNotification();
 
   useEffect(() => {
     const video = videoRef.current;
@@ -16,7 +18,19 @@ const HeroSection: React.FC = () => {
     setTimeout(() => {
       initializeSmoothScroll();
     }, 100);
-  }, []);
+
+    // Show welcome notification on mobile
+    const isMobile = window.innerWidth <= 768;
+    if (isMobile) {
+      setTimeout(() => {
+        addNotification(
+          'Welcome to AI Masterclass! All content has been updated with real videos and images.',
+          'success',
+          5000
+        );
+      }, 1000);
+    }
+  }, [addNotification]);
 
   useEffect(() => {
     const handleScroll = () => {

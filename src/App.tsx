@@ -1,5 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { NotificationProvider } from './contexts/NotificationContext';
+import NotificationContainer from './components/NotificationContainer';
 import HeroSection from './components/HeroSection';
 import WhatYouGetSection from './components/WhatYouGetSection';
 import AIMasterclassTVSection from './components/AIMasterclassTVSection';
@@ -35,12 +37,15 @@ function LandingPage() {
 
 function App() {
   return (
-    <Router>
-      <Routes>
-        <Route path="/" element={<LandingPage />} />
-        <Route path="/quiz" element={<QuizExample />} />
-      </Routes>
-    </Router>
+    <NotificationProvider>
+      <Router>
+        <Routes>
+          <Route path="/" element={<LandingPage />} />
+          <Route path="/quiz" element={<QuizExample />} />
+        </Routes>
+        <NotificationContainer />
+      </Router>
+    </NotificationProvider>
   );
 }
 

@@ -36,7 +36,7 @@ const SocialProofSection: React.FC = () => {
 
       {/* Video Grid */}
       <div className="relative z-10 max-w-6xl mx-auto">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {/* Video 1 - Ayan Bhattacharya */}
           <div className="flex flex-col items-center">
             <div className="relative w-full aspect-[9/16] max-w-sm bg-black/20 backdrop-blur-sm rounded-lg border border-nyu-purple/20 shadow-lg shadow-nyu-purple/10 mb-4 overflow-hidden">
@@ -97,6 +97,27 @@ const SocialProofSection: React.FC = () => {
               <p className="text-white/70 text-sm mb-2">Co Founder</p>
               <p className="text-white/60 text-sm mb-3">TINDER</p>
               <p className="text-white/80 text-sm mt-3">"The practical applications and real-world case studies were invaluable for my role."</p>
+            </div>
+          </div>
+
+          {/* Video 4 - Jed Dougherty */}
+          <div className="flex flex-col items-center">
+            <div className="relative w-full aspect-[16/9] max-w-sm bg-black/20 backdrop-blur-sm rounded-lg border border-nyu-purple/20 shadow-lg shadow-nyu-purple/10 mb-4 overflow-hidden">
+              <iframe
+                src="https://player.mux.com/oZhtkJScZZuK8pz8R9TYm007lhklotNTz029QmLRZkEu4?metadata-video-title=Jed+Dougherty+-+From+Prediction+to+Tasks+A+GenAI+Shift&video-title=Jed+Dougherty+-+From+Prediction+to+Tasks+A+GenAI+Shift"
+                style={{width: '100%', border: 'none'}}
+                allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+                allowFullScreen
+                title="Jed Dougherty - From Prediction to Tasks A GenAI Shift"
+              />
+            </div>
+            
+            {/* Alumni Card */}
+            <div className="bg-white/5 backdrop-blur-sm rounded-lg border border-nyu-purple/15 p-6 w-full max-w-sm text-center">
+              <h3 className="text-white font-semibold text-lg mb-2">Jed Dougherty</h3>
+              <p className="text-white/70 text-sm mb-2">Executive</p>
+              <p className="text-white/60 text-sm mb-3">AI MASTERCLASS</p>
+              <p className="text-white/80 text-sm mt-3">"From Prediction to Tasks: A GenAI Shift"</p>
             </div>
           </div>
         </div>
