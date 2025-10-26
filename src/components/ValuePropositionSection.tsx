@@ -101,16 +101,14 @@ const ValuePropositionSection: React.FC = () => {
         {/* Block 3: Image Left, Text Right */}
         <div className="flex flex-col lg:flex-row items-center gap-12">
           <div className="w-full lg:w-1/2">
-            <div className="relative w-full aspect-[4/3] bg-black/20 backdrop-blur-sm rounded-lg border-2 border-nyu-purple/20 shadow-lg shadow-nyu-purple/10 flex items-center justify-center">
-              <div className="text-center">
-                <div className="w-16 h-16 mx-auto mb-4 bg-nyu-purple/20 rounded-full flex items-center justify-center">
-                  <svg className="w-8 h-8 text-white" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M16 4c0-1.11.89-2 2-2s2 .89 2 2-.89 2-2 2-2-.89-2-2zm4 18v-6h2.5l-2.54-7.63A1.5 1.5 0 0 0 18.54 8H16c-.8 0-1.54.37-2.01.99L12 11l-1.99-2.01A2.5 2.5 0 0 0 8 8H5.46c-.8 0-1.54.37-2.01.99L1 10.5V22h2v-6h2.5l2.5-7.5h2l2.5 7.5H14v6h2z"/>
-                  </svg>
-                </div>
-                <p className="text-white/80 text-sm">Executive Network</p>
-                <p className="text-white/60 text-xs mt-1">Coming Soon</p>
-              </div>
+            <div className="relative w-full aspect-video bg-black/20 backdrop-blur-sm rounded-lg border-2 border-nyu-purple/20 shadow-lg shadow-nyu-purple/10 overflow-hidden">
+              <iframe
+                src="https://player.mux.com/HDd01yD1DDHKcZ701QHugR8z015WMZI8DT2QFytCuBLOq4?metadata-video-title=AIMC_+Testimonial_Vibhav_Prasad+%281%29&video-title=AIMC_+Testimonial_Vibhav_Prasad+%281%29"
+                style={{width: '100%', height: '100%', border: 'none'}}
+                allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+                allowFullScreen
+                title="AIMC Testimonial Vibhav Prasad"
+              />
             </div>
           </div>
           
