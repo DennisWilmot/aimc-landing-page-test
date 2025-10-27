@@ -33,9 +33,7 @@ const FinalCallSection: React.FC = () => {
             <div className="text-left">
               {/* Main Heading */}
               <h2 className="text-3xl sm:text-4xl lg:text-5xl font-bold text-nyu-light-violet-2 mb-6 leading-tight">
-                <span className="block">Final recap - why should</span>
-                <span className="block">people take action today</span>
-                <span className="block">(create urgency)</span>
+                Final Recap
               </h2>
 
               {/* Descriptive Paragraph */}
