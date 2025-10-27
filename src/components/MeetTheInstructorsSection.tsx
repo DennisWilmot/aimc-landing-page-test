@@ -40,21 +40,12 @@ const MeetTheInstructorsSection: React.FC = () => {
               Founder & Principal, Intellibus
             </p>
             
-            {/* Achievements */}
-            <ul className="text-left space-y-3 max-w-sm">
-              <li className="flex items-start">
-                <span className="w-2 h-2 bg-nyu-purple rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                <span className="text-white text-sm">Executive advisor to Fortune 500 boards on AI strategy</span>
-              </li>
-              <li className="flex items-start">
-                <span className="w-2 h-2 bg-nyu-purple rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                <span className="text-white text-sm">Co-lead of NYU's AI Program</span>
-              </li>
-              <li className="flex items-start">
-                <span className="w-2 h-2 bg-nyu-purple rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                <span className="text-white text-sm">Global speaker on AI governance and transformation</span>
-              </li>
-            </ul>
+            {/* Bio */}
+            <div className="text-left max-w-md">
+              <p className="text-white/90 text-base leading-relaxed">
+                Ed Watal is an AI thought leader and technology investor. He founded Intellibus, an Inc. 5000 Top 100 fastest-growing software firm, and leads BigParser, an ethical-AI data commons initiative. Forbes Books is collaborating with him on a seminal book about our AI future, and board members/C-suite leaders at major financial institutions rely on his strategic guidance for transformation.
+              </p>
+            </div>
           </div>
 
           {/* Instructor 2 - Jepson Taylor */}
@@ -80,21 +71,12 @@ const MeetTheInstructorsSection: React.FC = () => {
               Former Chief AI Strategist, Dataiku
             </p>
             
-            {/* Achievements */}
-            <ul className="text-left space-y-3 max-w-sm">
-              <li className="flex items-start">
-                <span className="w-2 h-2 bg-nyu-purple rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                <span className="text-white text-sm">AI startup founder and executive coach</span>
-              </li>
-              <li className="flex items-start">
-                <span className="w-2 h-2 bg-nyu-purple rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                <span className="text-white text-sm">Podcast host on applied AI for business</span>
-              </li>
-              <li className="flex items-start">
-                <span className="w-2 h-2 bg-nyu-purple rounded-full mt-2 mr-3 flex-shrink-0"></span>
-                <span className="text-white text-sm">20+ years building enterprise AI solutions</span>
-              </li>
-            </ul>
+            {/* Bio */}
+            <div className="text-left max-w-md">
+              <p className="text-white/90 text-base leading-relaxed">
+                Jepson Taylor is a veteran AI leader with 18+ years in machine learning across semiconductors, finance, and enterprise software. Former Chief Data Scientist at HireVue (14 AI patents), he co-founded Zeff.ai (acquired by DataRobot), served as Chief AI Evangelist at DataRobot and Chief AI Strategist at Dataiku. He now co-founds a new AI venture bringing a breakthrough B2C product to market.
+              </p>
+            </div>
           </div>
 
         </div>

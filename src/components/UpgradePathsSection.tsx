@@ -60,7 +60,7 @@ const UpgradePathsSection: React.FC = () => {
           </h3>
           
           {/* When/Where */}
-          <p className="text-nyu-purple text-lg font-medium mb-6 relative z-10">
+          <p className="text-white text-lg font-medium mb-6 relative z-10">
             NYU, New York • Nov 20–22, 2025
           </p>
           

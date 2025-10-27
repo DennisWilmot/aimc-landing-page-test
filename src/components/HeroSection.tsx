@@ -78,9 +78,14 @@ const HeroSection: React.FC = () => {
           <a href="#faq" className="text-white/80 hover:text-white transition-colors">FAQ</a>
         </div>
 
-        <button className="bg-nyu-purple hover:bg-nyu-purple/90 text-white px-4 py-1.5 rounded font-medium text-sm transition-colors">
+        <a 
+          href="https://learn.aimasterclass.com/course/free-ai-masterclass"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-nyu-purple hover:bg-nyu-purple/90 text-white px-4 py-1.5 rounded font-medium text-sm transition-colors inline-block text-center"
+        >
           Enroll Now
-        </button>
+        </a>
       </nav>
 
       {/* Floating Navbar - Appears on scroll up */}
@@ -102,9 +107,14 @@ const HeroSection: React.FC = () => {
           <a href="#faq" className="text-white/80 hover:text-white transition-colors">FAQ</a>
         </div>
 
-        <button className="bg-nyu-purple hover:bg-nyu-purple/90 text-white px-4 py-1.5 rounded font-medium text-sm transition-colors">
+        <a 
+          href="https://learn.aimasterclass.com/course/free-ai-masterclass"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="bg-nyu-purple hover:bg-nyu-purple/90 text-white px-4 py-1.5 rounded font-medium text-sm transition-colors inline-block text-center"
+        >
           Enroll Now
-        </button>
+        </a>
       </nav>
 
       {/* Hero Content */}
@@ -141,9 +151,14 @@ const HeroSection: React.FC = () => {
 
           {/* CTA Button */}
           <div className="flex flex-col sm:flex-row items-center lg:items-start justify-center lg:justify-start animate-slide-up">
-            <button className="w-full max-w-sm sm:w-auto bg-nyu-purple hover:bg-nyu-purple/90 text-white px-6 py-3 rounded font-medium text-base transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-nyu-purple/25">
+            <a 
+              href="https://learn.aimasterclass.com/course/free-ai-masterclass"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full max-w-sm sm:w-auto bg-nyu-purple hover:bg-nyu-purple/90 text-white px-6 py-3 rounded font-medium text-base transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-nyu-purple/25 text-center block"
+            >
               Get Free Course Now
-            </button>
+            </a>
           </div>
 
           {/* Mobile Video - Shows only on mobile */}

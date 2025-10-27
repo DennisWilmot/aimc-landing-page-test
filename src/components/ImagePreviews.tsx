@@ -2,6 +2,7 @@ import React, { useState, useEffect } from 'react';
 
 const ImagePreviews: React.FC = () => {
   const [currentSlide, setCurrentSlide] = useState(0);
+  const [imagesLoaded, setImagesLoaded] = useState(false);
 
   // Course images from AI Masterclass events
   const courseImages = [
@@ -57,6 +58,46 @@ const ImagePreviews: React.FC = () => {
     }
   ];
 
+  // Start loading images after initial page render completes
+  // This gives browser time to load critical content first, then loads carousel images
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setImagesLoaded(true);
+      
+      // Preload first few images immediately
+      const link1 = document.createElement('link');
+      link1.rel = 'preload';
+      link1.as = 'image';
+      link1.href = courseImages[0].src;
+      document.head.appendChild(link1);
+
+      const link2 = document.createElement('link');
+      link2.rel = 'preload';
+      link2.as = 'image';
+      link2.href = courseImages[1].src;
+      document.head.appendChild(link2);
+
+      return () => {
+        document.head.removeChild(link1);
+        document.head.removeChild(link2);
+      };
+    }, 1000); // Start loading after 1 second (after hero is rendered)
+
+    return () => clearTimeout(timer);
+  }, [courseImages]);
+
+  // Preload next and previous images for smooth transitions
+  useEffect(() => {
+    const nextIndex = (currentSlide + 1) % courseImages.length;
+    const prevIndex = (currentSlide - 1 + courseImages.length) % courseImages.length;
+    
+    // Create invisible images to trigger browser caching
+    const nextImg = new Image();
+    const prevImg = new Image();
+    nextImg.src = courseImages[nextIndex].src;
+    prevImg.src = courseImages[prevIndex].src;
+  }, [currentSlide, courseImages]);
+
   // Auto-advance slides every 5 seconds
   useEffect(() => {
     const timer = setInterval(() => {
@@ -99,6 +140,14 @@ const ImagePreviews: React.FC = () => {
               src={courseImages[currentSlide].src}
               alt={courseImages[currentSlide].alt}
               className="w-full h-full object-cover transition-opacity duration-500"
+              loading="eager"
+              decoding="async"
+              fetchPriority="high"
+              sizes="(max-width: 640px) 100vw, (max-width: 1024px) 90vw, 1200px"
+              style={{ 
+                imageRendering: 'auto',
+                contentVisibility: 'auto'
+              }}
             />
             
             {/* Image Overlay */}
@@ -150,6 +199,14 @@ const ImagePreviews: React.FC = () => {
                   src={image.src}
                   alt={image.alt}
                   className="w-full h-full object-cover"
+                  loading="lazy"
+                  decoding="async"
+                  width="80"
+                  height="80"
+                  style={{ 
+                    imageRendering: 'auto',
+                    willChange: index === currentSlide ? 'auto' : 'transform'
+                  }}
                 />
                 {index === currentSlide && (
                   <div className="absolute inset-0 bg-nyu-purple/20" />

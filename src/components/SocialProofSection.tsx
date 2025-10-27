@@ -104,9 +104,14 @@ const SocialProofSection: React.FC = () => {
 
       {/* Bottom CTA */}
       <div className="text-center mt-12">
-        <button className="bg-nyu-purple hover:bg-nyu-purple/90 text-white px-8 py-3 rounded font-medium text-base transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-nyu-purple/25">
+        <a 
+          href="https://learn.aimasterclass.com/course/free-ai-masterclass"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block bg-nyu-purple hover:bg-nyu-purple/90 text-white px-8 py-3 rounded font-medium text-base transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-nyu-purple/25"
+        >
           Enroll Now
-        </button>
+        </a>
       </div>
     </section>
   );

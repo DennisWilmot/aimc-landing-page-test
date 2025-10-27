@@ -32,9 +32,14 @@ const ValuePropositionSection: React.FC = () => {
         <p className="text-lg sm:text-xl text-white/90 mb-8 leading-relaxed">
           Executive focus, not technical overload. Get practical guidance for board-level decisions on AI strategy and risk. Start free today and expand into the full masterclass when ready.
         </p>
-        <button className="bg-nyu-purple hover:bg-nyu-purple/90 text-white px-8 py-4 rounded font-medium text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-nyu-purple/25">
+        <a 
+          href="https://learn.aimasterclass.com/course/free-ai-masterclass"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block bg-nyu-purple hover:bg-nyu-purple/90 text-white px-8 py-4 rounded font-medium text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-nyu-purple/25"
+        >
           Get Free Course Now
-        </button>
+        </a>
       </div>
 
       {/* Value Proposition Blocks */}
@@ -120,9 +125,14 @@ const ValuePropositionSection: React.FC = () => {
               <p className="text-lg text-white/90 mb-8 leading-relaxed">
                 Get updates, occasional invites to live Q&A, and news from our executive community. Access to curated peer cohorts is part of our paid experiences.
               </p>
-              <button className="bg-nyu-purple hover:bg-nyu-purple/90 text-white px-6 py-3 rounded font-medium text-base transition-all duration-300 transform hover:scale-105">
+              <a 
+                href="https://learn.aimasterclass.com/course/free-ai-masterclass"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="inline-block bg-nyu-purple hover:bg-nyu-purple/90 text-white px-6 py-3 rounded font-medium text-base transition-all duration-300 transform hover:scale-105"
+              >
                 Get Free Course Now
-              </button>
+              </a>
             </div>
           </div>
         </div>

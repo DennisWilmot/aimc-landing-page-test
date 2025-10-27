@@ -134,23 +134,6 @@ const AIMasterclassTVSection: React.FC = () => {
                 </div>
                 <p className="text-white/80 text-base mt-3 font-medium">Vibhav Prasad on Innovation</p>
               </div>
-
-              {/* Video Thumbnail 4 */}
-              <div className="group cursor-pointer flex-shrink-0 w-full sm:w-[calc(50%-1rem)] snap-center">
-                <div className="relative aspect-video bg-black/20 backdrop-blur-sm rounded-lg border-2 border-nyu-purple/20 hover:border-nyu-purple/40 transition-all duration-300 overflow-hidden">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-20 h-20 bg-nyu-purple/20 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                      <svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M8 5v14l11-7z"/>
-                      </svg>
-                    </div>
-                  </div>
-                  <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    <p className="text-white text-base font-medium">Preview</p>
-                  </div>
-                </div>
-                <p className="text-white/80 text-base mt-3 font-medium">More Investor Insights</p>
-              </div>
             </div>
           </div>
         </div>
@@ -234,23 +217,6 @@ const AIMasterclassTVSection: React.FC = () => {
                 </div>
                 <p className="text-white/80 text-base mt-3 font-medium">Ayan Bhattacharya on Trade-offs</p>
               </div>
-
-              {/* Video Thumbnail 4 - Dan Shiebler */}
-              <div className="group cursor-pointer flex-shrink-0 w-full sm:w-[calc(50%-1rem)] snap-center">
-                <div className="relative aspect-video bg-black/20 backdrop-blur-sm rounded-lg border-2 border-nyu-purple/20 hover:border-nyu-purple/40 transition-all duration-300 overflow-hidden">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-20 h-20 bg-nyu-purple/20 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                      <svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M8 5v14l11-7z"/>
-                      </svg>
-                    </div>
-                  </div>
-                  <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    <p className="text-white text-base font-medium">Preview</p>
-                  </div>
-                </div>
-                <p className="text-white/80 text-base mt-3 font-medium">Dan Shiebler on Implementation</p>
-              </div>
             </div>
           </div>
         </div>
@@ -307,24 +273,7 @@ const AIMasterclassTVSection: React.FC = () => {
                 <p className="text-white/80 text-base mt-3 font-medium">Peggy Smyth on Boardroom Ethics</p>
               </div>
 
-              {/* Video Thumbnail 2 - Ed Watal */}
-              <div className="group cursor-pointer flex-shrink-0 w-full sm:w-[calc(50%-1rem)] snap-center">
-                <div className="relative aspect-video bg-black/20 backdrop-blur-sm rounded-lg border-2 border-nyu-purple/20 hover:border-nyu-purple/40 transition-all duration-300 overflow-hidden">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-20 h-20 bg-nyu-purple/20 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                      <svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M8 5v14l11-7z"/>
-                      </svg>
-                    </div>
-                  </div>
-                  <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    <p className="text-white text-base font-medium">Preview</p>
-                  </div>
-                </div>
-                <p className="text-white/80 text-base mt-3 font-medium">Ed Watal on Responsible AI</p>
-              </div>
-
-              {/* Video Thumbnail 3 - Seth Dobrin */}
+              {/* Video Thumbnail 2 - Seth Dobrin */}
               <div className="group cursor-pointer flex-shrink-0 w-full sm:w-[calc(50%-1rem)] snap-center">
                 <div className="relative aspect-video bg-black/20 backdrop-blur-sm rounded-lg border-2 border-nyu-purple/20 hover:border-nyu-purple/40 transition-all duration-300 overflow-hidden">
                   <iframe
@@ -337,23 +286,6 @@ const AIMasterclassTVSection: React.FC = () => {
                 </div>
                 <p className="text-white/80 text-base mt-3 font-medium">Seth Dobrin on Governance</p>
               </div>
-
-              {/* Video Thumbnail 4 - Ethics in AI Scaling */}
-              <div className="group cursor-pointer flex-shrink-0 w-full sm:w-[calc(50%-1rem)] snap-center">
-                <div className="relative aspect-video bg-black/20 backdrop-blur-sm rounded-lg border-2 border-nyu-purple/20 hover:border-nyu-purple/40 transition-all duration-300 overflow-hidden">
-                  <div className="absolute inset-0 flex items-center justify-center">
-                    <div className="w-20 h-20 bg-nyu-purple/20 rounded-full flex items-center justify-center group-hover:scale-110 transition-transform duration-300">
-                      <svg className="w-10 h-10 text-white" fill="currentColor" viewBox="0 0 24 24">
-                        <path d="M8 5v14l11-7z"/>
-                      </svg>
-                    </div>
-                  </div>
-                  <div className="absolute inset-0 bg-black/40 opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-center justify-center">
-                    <p className="text-white text-base font-medium">Preview</p>
-                  </div>
-                </div>
-                <p className="text-white/80 text-base mt-3 font-medium">Ethics in AI Scaling</p>
-              </div>
             </div>
           </div>
         </div>
@@ -362,9 +294,14 @@ const AIMasterclassTVSection: React.FC = () => {
 
       {/* Bottom CTA */}
       <div className="relative z-10 text-center mt-12">
-        <button className="bg-nyu-purple hover:bg-nyu-purple/90 text-white px-8 py-4 rounded font-medium text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-nyu-purple/25">
+        <a 
+          href="https://learn.aimasterclass.com/course/free-ai-masterclass"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="inline-block bg-nyu-purple hover:bg-nyu-purple/90 text-white px-8 py-4 rounded font-medium text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-nyu-purple/25"
+        >
           Get Free Course Now
-        </button>
+        </a>
       </div>
     </section>
   );
