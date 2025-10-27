@@ -75,27 +75,29 @@ const FinalCallSection: React.FC = () => {
 
               {/* Main CTA Button */}
               <div className="mb-6">
-                <button className="w-full sm:w-auto bg-nyu-purple hover:bg-nyu-purple/90 text-white px-12 py-4 rounded font-medium text-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-nyu-purple/25">
+                <a 
+                  href="https://learn.aimasterclass.com/course/free-ai-masterclass"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-block w-full sm:w-auto bg-nyu-purple hover:bg-nyu-purple/90 text-white px-12 py-4 rounded font-medium text-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-nyu-purple/25 text-center"
+                >
                   SECURE YOUR SPOT NOW
-                </button>
+                </a>
               </div>
 
             </div>
           </div>
 
-          {/* Right Column - Image/Video Placeholder */}
+          {/* Right Column - Video */}
           <div className="w-full lg:w-1/2">
-            <div className="relative w-full aspect-[4/3] bg-white/10 backdrop-blur-sm rounded-lg border-2 border-white/20 flex items-center justify-center">
-              <div className="text-center">
-                <div className="w-24 h-24 mx-auto mb-6 bg-nyu-purple/20 rounded-full flex items-center justify-center">
-                  <svg className="w-12 h-12 text-white" fill="currentColor" viewBox="0 0 24 24">
-                    <path d="M8 5v14l11-7z"/>
-                  </svg>
-                </div>
-                <p className="text-white/80 text-lg font-medium mb-2">Image or video that helps</p>
-                <p className="text-white/80 text-lg font-medium mb-2">reinforce core value proposition</p>
-                <p className="text-white/60 text-sm mt-4">and articulate what it is you do</p>
-              </div>
+            <div className="relative w-full aspect-video bg-black/20 backdrop-blur-sm rounded-lg border-2 border-nyu-purple/20 shadow-lg shadow-nyu-purple/10 overflow-hidden">
+              <iframe
+                src="https://player.mux.com/64KM2EXTWKytbMWP2tJKJqvsJGdNUz4wKPRX5vW8PKU?metadata-video-title=AIMC_Testimonial_Robert+Jakobsze_1&video-title=AIMC_Testimonial_Robert+Jakobsze_1"
+                style={{width: '100%', height: '100%', border: 'none'}}
+                allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
+                allowFullScreen
+                title="AIMC Testimonial Robert Jakobsze"
+              />
             </div>
           </div>
 

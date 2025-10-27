@@ -22,17 +22,11 @@ const FreeSyllabusPreviewSection: React.FC = () => {
           <div className="flex items-start justify-between gap-4 relative z-10">
             <div className="flex-1">
               <h3 className="text-xl font-semibold text-white mb-2">
-                AI Strategy in the Boardroom
+                AI Basics & Business Strategy
               </h3>
               <p className="text-white/80">
-                What leaders must ask
+                Foundational concepts and strategic frameworks for AI implementation
               </p>
-            </div>
-            <div className="flex items-center gap-2 flex-shrink-0">
-              <svg className="w-5 h-5 text-nyu-purple" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M8 5v14l11-7z"/>
-              </svg>
-              <span className="text-white/70 text-sm">Preview 0:45</span>
             </div>
           </div>
         </div>
@@ -43,17 +37,11 @@ const FreeSyllabusPreviewSection: React.FC = () => {
           <div className="flex items-start justify-between gap-4 relative z-10">
             <div className="flex-1">
               <h3 className="text-xl font-semibold text-white mb-2">
-                Governance & Risk Frameworks
+                Operating Model for AI & Key Terms
               </h3>
               <p className="text-white/80">
-                Practical controls for responsible scale
+                Build the right structure and master essential AI terminology
               </p>
-            </div>
-            <div className="flex items-center gap-2 flex-shrink-0">
-              <svg className="w-5 h-5 text-nyu-purple" fill="currentColor" viewBox="0 0 24 24">
-                <path d="M8 5v14l11-7z"/>
-              </svg>
-              <span className="text-white/70 text-sm">Preview 0:40</span>
             </div>
           </div>
         </div>
@@ -64,40 +52,10 @@ const FreeSyllabusPreviewSection: React.FC = () => {
           <div className="flex items-start justify-between gap-4 relative z-10">
             <div className="flex-1">
               <h3 className="text-xl font-semibold text-white mb-2">
-                Operating Models
+                AI Future State
               </h3>
               <p className="text-white/80">
-                Build vs. buy and how to decide
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* Module 4 */}
-        <div className="relative bg-white/5 backdrop-blur-sm rounded-lg border border-nyu-purple/15 p-6 hover:bg-white/10 transition-all duration-300 overflow-hidden group">
-          <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
-          <div className="flex items-start justify-between gap-4 relative z-10">
-            <div className="flex-1">
-              <h3 className="text-xl font-semibold text-white mb-2">
-                Sector Case Vignettes
-              </h3>
-              <p className="text-white/80">
-                Finance, Healthcare, Public Sector
-              </p>
-            </div>
-          </div>
-        </div>
-
-        {/* Module 5 */}
-        <div className="relative bg-white/5 backdrop-blur-sm rounded-lg border border-nyu-purple/15 p-6 hover:bg-white/10 transition-all duration-300 overflow-hidden group">
-          <div className="absolute inset-0 -translate-x-full group-hover:translate-x-full transition-transform duration-1000 bg-gradient-to-r from-transparent via-white/10 to-transparent"></div>
-          <div className="flex items-start justify-between gap-4 relative z-10">
-            <div className="flex-1">
-              <h3 className="text-xl font-semibold text-white mb-2">
-                Boardroom Prompts
-              </h3>
-              <p className="text-white/80">
-                Drive alignment in your next meeting
+                Vision for the future and how to prepare your organization
               </p>
             </div>
           </div>
