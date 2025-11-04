@@ -62,18 +62,6 @@ const FreeSyllabusPreviewSection: React.FC = () => {
         </div>
 
       </div>
-
-      {/* Primary CTA */}
-      <div className="text-center">
-        <a 
-          href="https://learn.aimasterclass.com/course/free-ai-masterclass"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="inline-block bg-nyu-purple hover:bg-nyu-purple/90 text-white px-8 py-4 rounded font-medium text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-nyu-purple/25"
-        >
-          Get Free Course Now
-        </a>
-      </div>
     </section>
   );
 };
