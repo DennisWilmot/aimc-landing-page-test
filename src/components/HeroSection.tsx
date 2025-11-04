@@ -1,10 +1,47 @@
-import React, { useEffect, useRef, useState } from 'react';
+import React, { useEffect, useRef } from 'react';
+import MuxPlayer from '@mux/mux-player-react';
 import { initializeSmoothScroll } from '../utils/smoothScroll';
 
 const HeroSection: React.FC = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
-  const [showNavbar, setShowNavbar] = useState(false);
-  const [lastScrollY, setLastScrollY] = useState(0);
+  const muxPlayerRef = useRef<any>(null);
+  
+  const playbackId = "FQlNEHa3G90117sMdpV7cxXW8FGFZe34S8tEklf1xFDs";
+  const posterUrl = "https://aimc-pics-540334252609.s3.us-east-2.amazonaws.com/Hero%20section%20thumbnail.png";
+
+  useEffect(() => {
+    console.log('🎬 HeroSection mounted');
+    console.log('🎥 Playback ID:', playbackId);
+    console.log('📸 Poster URL:', posterUrl);
+    
+    // Test if poster image loads with detailed error info
+    const img = new Image();
+    img.onload = () => {
+      console.log('✅ Poster image loaded successfully!');
+      console.log('📐 Image dimensions:', img.width, 'x', img.height);
+    };
+    img.onerror = (e) => {
+      console.error('❌ Failed to load poster image');
+      console.error('🔗 URL:', posterUrl);
+      console.error('💡 Make sure:');
+      console.error('   1. Bucket policy allows GetObject for public');
+      console.error('   2. Object ACL allows public read access');
+      console.error('   3. CORS is enabled on the bucket');
+      console.error('   4. File name matches exactly (check spaces)');
+      
+      // Try fetching to get more details
+      fetch(posterUrl, { method: 'HEAD', mode: 'cors' })
+        .then((response) => {
+          console.log('📡 Fetch response status:', response.status);
+          console.log('📡 Fetch response headers:', Object.fromEntries(response.headers.entries()));
+        })
+        .catch((err) => {
+          console.error('📡 Fetch error details:', err);
+        });
+    };
+    // Don't set crossOrigin initially - test if basic access works first
+    img.src = posterUrl;
+  }, []);
 
   useEffect(() => {
     const video = videoRef.current;
@@ -18,24 +55,6 @@ const HeroSection: React.FC = () => {
     }, 100);
   }, []);
 
-  useEffect(() => {
-    const handleScroll = () => {
-      const currentScrollY = window.scrollY;
-      
-      // Show navbar when scrolling up or when at the very top
-      if (currentScrollY < lastScrollY || currentScrollY < 100) {
-        setShowNavbar(true);
-      } else {
-        setShowNavbar(false);
-      }
-      
-      setLastScrollY(currentScrollY);
-    };
-
-    window.addEventListener('scroll', handleScroll, { passive: true });
-    
-    return () => window.removeEventListener('scroll', handleScroll);
-  }, [lastScrollY]);
 
   return (
     <section className="relative min-h-screen w-full overflow-hidden bg-black">
@@ -48,7 +67,6 @@ const HeroSection: React.FC = () => {
           muted
           loop
           playsInline
-          poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1920 1080'%3E%3Cdefs%3E%3ClinearGradient id='grad' x1='0%25' y1='0%25' x2='100%25' y2='100%25'%3E%3Cstop offset='0%25' style='stop-color:%2357068c;stop-opacity:1' /%3E%3Cstop offset='100%25' style='stop-color:%23000000;stop-opacity:1' /%3E%3C/linearGradient%3E%3C/defs%3E%3Crect width='1920' height='1080' fill='url(%23grad)'/%3E%3C/svg%3E"
         >
           {/* AI Masterclass Hero Background Video */}
           <source src="/HeroBackgroundVideo.mp4" type="video/mp4" />
@@ -61,37 +79,8 @@ const HeroSection: React.FC = () => {
         <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-black/95" style={{background: 'linear-gradient(to bottom, transparent 0%, transparent 70%, rgba(0,0,0,0.95) 100%)'}} />
       </div>
 
-      {/* Navigation */}
-      <nav className="relative z-10 flex items-center justify-between px-4 sm:px-6 lg:px-8 bg-black/60 backdrop-blur-md border-b border-nyu-purple/15 h-[11.11vh]">
-        <div className="flex items-center space-x-4">
-          <img 
-            src="/AIMC_Angled_Horiz_w Title_Violet.png" 
-            alt="AI Masterclass Logo" 
-            className="h-[8vh] w-auto"
-          />
-        </div>
-        
-        <div className="hidden md:flex items-center space-x-8">
-          <a href="#social-proof" className="text-white/80 hover:text-white transition-colors">Alumni</a>
-          <a href="#instructors" className="text-white/80 hover:text-white transition-colors">Faculty</a>
-          <a href="#value-prop" className="text-white/80 hover:text-white transition-colors">Program</a>
-          <a href="#faq" className="text-white/80 hover:text-white transition-colors">FAQ</a>
-        </div>
-
-        <a 
-          href="https://learn.aimasterclass.com/course/free-ai-masterclass"
-          target="_blank"
-          rel="noopener noreferrer"
-          className="bg-nyu-purple hover:bg-nyu-purple/90 text-white px-4 py-1.5 rounded font-medium text-sm transition-colors inline-block text-center"
-        >
-          Enroll Now
-        </a>
-      </nav>
-
-      {/* Floating Navbar - Appears on scroll up */}
-      <nav className={`fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-4 sm:px-6 lg:px-8 bg-black/80 backdrop-blur-md border-b border-nyu-purple/15 h-[11.11vh] transition-transform duration-300 ${
-        showNavbar ? 'translate-y-0' : '-translate-y-full'
-      }`}>
+      {/* Fixed Navigation */}
+      <nav className="fixed top-0 left-0 right-0 z-50 flex items-center justify-between px-4 sm:px-6 lg:px-8 bg-black/80 backdrop-blur-md border-b border-nyu-purple/15 h-[11.11vh]">
         <div className="flex items-center space-x-4">
           <img 
             src="/AIMC_Angled_Horiz_w Title_Violet.png" 
@@ -118,17 +107,22 @@ const HeroSection: React.FC = () => {
       </nav>
 
       {/* Hero Content */}
-      <div className="relative z-10 flex items-start min-h-screen px-4 sm:px-6 lg:px-8 pt-6 pb-16">
+      <div className="relative z-10 flex items-start min-h-screen px-4 sm:px-6 lg:px-8 pt-[20vh] pb-16">
         <div className="flex flex-col lg:flex-row w-full items-start min-h-full">
           {/* Desktop Video - Shows only on desktop (LEFT COLUMN) */}
           <div className="hidden lg:flex w-1/2 items-center justify-center pr-8 pt-8">
             <div className="relative w-full max-w-xs aspect-[9/16] bg-black/20 backdrop-blur-sm rounded-lg border border-nyu-purple/20 shadow-lg shadow-nyu-purple/10 overflow-hidden">
-              <iframe
-                src="https://player.mux.com/FQlNEHa3G90117sMdpV7cxXW8FGFZe34S8tEklf1xFDs?metadata-video-title=AIMC+Vertical+Testimonial+2025&video-title=AIMC+Vertical+Testimonial+2025"
-                style={{width: '100%', height: '100%', border: 'none'}}
-                allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
-                allowFullScreen
-                title="AI Masterclass Vertical Testimonial 2025"
+              <MuxPlayer
+                ref={muxPlayerRef}
+                playbackId={playbackId}
+                poster={posterUrl}
+                metadataVideoTitle="AI Masterclass Vertical Testimonial 2025"
+                streamType="on-demand"
+                className="w-full h-full"
+                onLoadedMetadata={() => console.log('✅ Desktop MuxPlayer metadata loaded')}
+                onCanPlay={() => console.log('✅ Desktop MuxPlayer can play')}
+                onLoadStart={() => console.log('🔄 Desktop MuxPlayer load started')}
+                onError={(e: any) => console.error('❌ Desktop MuxPlayer error:', e)}
               />
             </div>
           </div>
@@ -139,9 +133,8 @@ const HeroSection: React.FC = () => {
           {/* Main Headline */}
           <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-4 animate-slide-up">
             <span className="block">AI Masterclass</span>
-            <span className="block">
-              Executive Education (Free Online)
-            </span>
+            <span className="block">Executive Education</span>
+            <span className="block">(Free Online)</span>
           </h1>
 
           {/* Subtitle */}
@@ -164,12 +157,16 @@ const HeroSection: React.FC = () => {
           {/* Mobile Video - Shows only on mobile */}
           <div className="w-full lg:hidden flex items-center justify-center pt-8">
             <div className="relative w-full max-w-md aspect-[9/16] bg-black/20 backdrop-blur-sm rounded-lg border border-nyu-purple/20 shadow-lg shadow-nyu-purple/10 overflow-hidden">
-              <iframe
-                src="https://player.mux.com/FQlNEHa3G90117sMdpV7cxXW8FGFZe34S8tEklf1xFDs?metadata-video-title=AIMC+Vertical+Testimonial+2025&video-title=AIMC+Vertical+Testimonial+2025"
-                style={{width: '100%', height: '100%', border: 'none'}}
-                allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
-                allowFullScreen
-                title="AI Masterclass Vertical Testimonial 2025"
+              <MuxPlayer
+                playbackId={playbackId}
+                poster={posterUrl}
+                metadataVideoTitle="AI Masterclass Vertical Testimonial 2025"
+                streamType="on-demand"
+                className="w-full h-full"
+                onLoadedMetadata={() => console.log('✅ Mobile MuxPlayer metadata loaded')}
+                onCanPlay={() => console.log('✅ Mobile MuxPlayer can play')}
+                onLoadStart={() => console.log('🔄 Mobile MuxPlayer load started')}
+                onError={(e: any) => console.error('❌ Mobile MuxPlayer error:', e)}
               />
             </div>
           </div>

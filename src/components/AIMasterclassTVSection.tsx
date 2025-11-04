@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import MuxPlayer from '@mux/mux-player-react';
 
 const AIMasterclassTVSection: React.FC = () => {
   const carousel1Ref = useRef<HTMLDivElement>(null);
@@ -96,12 +97,12 @@ const AIMasterclassTVSection: React.FC = () => {
               {/* Video Thumbnail 1 - Ed Cardon */}
               <div className="group cursor-pointer flex-shrink-0 w-full sm:w-[calc(50%-1rem)] snap-center">
                 <div className="relative aspect-video bg-black/20 backdrop-blur-sm rounded-lg border-2 border-nyu-purple/20 hover:border-nyu-purple/40 transition-all duration-300 overflow-hidden">
-                  <iframe
-                    src="https://player.mux.com/znolWXgUNRlF96rojDW5C02hlyDI2Q6xFTJUqZnfX502U?metadata-video-title=Ed+Cardon+-+AI+Offense+%26+Defence+ST25&video-title=Ed+Cardon+-+AI+Offense+%26+Defence+ST25"
-                    style={{width: '100%', height: '100%', border: 'none'}}
-                    allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
-                    allowFullScreen
-                    title="Ed Cardon - AI Offense & Defence ST25"
+                  <MuxPlayer
+                    playbackId="znolWXgUNRlF96rojDW5C02hlyDI2Q6xFTJUqZnfX502U"
+                    poster="https://aimc-pics-540334252609.s3.us-east-2.amazonaws.com/Ed+Cardon+-+AI+Offense+and+Deffense.png"
+                    metadataVideoTitle="Ed Cardon - AI Offense & Defence ST25"
+                    streamType="on-demand"
+                    className="w-full h-full"
                   />
                 </div>
                 <p className="text-white/80 text-base mt-3 font-medium">Ed Cardon on AI Offense & Defense</p>
@@ -110,12 +111,12 @@ const AIMasterclassTVSection: React.FC = () => {
               {/* Video Thumbnail 2 - Naveen Jain */}
               <div className="group cursor-pointer flex-shrink-0 w-full sm:w-[calc(50%-1rem)] snap-center">
                 <div className="relative aspect-video bg-black/20 backdrop-blur-sm rounded-lg border-2 border-nyu-purple/20 hover:border-nyu-purple/40 transition-all duration-300 overflow-hidden">
-                  <iframe
-                    src="https://player.mux.com/Pj9mtrHK02PCzm8wmxfUAtQzWPIVCQehgoRCQwinsvkk?metadata-video-title=Naveen+Jain+Snippet+1+FT+2024&video-title=Naveen+Jain+Snippet+1+FT+2024"
-                    style={{width: '100%', height: '100%', border: 'none'}}
-                    allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
-                    allowFullScreen
-                    title="Naveen Jain Snippet 1 FT 2024"
+                  <MuxPlayer
+                    playbackId="Pj9mtrHK02PCzm8wmxfUAtQzWPIVCQehgoRCQwinsvkk"
+                    poster="https://aimc-pics-540334252609.s3.us-east-2.amazonaws.com/Naveen+Jain_s+AI+Vision.png"
+                    metadataVideoTitle="Naveen Jain Snippet 1 FT 2024"
+                    streamType="on-demand"
+                    className="w-full h-full"
                   />
                 </div>
                 <p className="text-white/80 text-base mt-3 font-medium">Naveen Jain's AI Vision</p>
@@ -179,12 +180,12 @@ const AIMasterclassTVSection: React.FC = () => {
               {/* Video Thumbnail 1 - Jed Dougherty */}
               <div className="group cursor-pointer flex-shrink-0 w-full sm:w-[calc(50%-1rem)] snap-center">
                 <div className="relative aspect-video bg-black/20 backdrop-blur-sm rounded-lg border-2 border-nyu-purple/20 hover:border-nyu-purple/40 transition-all duration-300 overflow-hidden">
-                  <iframe
-                    src="https://player.mux.com/oZhtkJScZZuK8pz8R9TYm007lhklotNTz029QmLRZkEu4?metadata-video-title=Jed+Dougherty+-+From+Prediction+to+Tasks+A+GenAI+Shift&video-title=Jed+Dougherty+-+From+Prediction+to+Tasks+A+GenAI+Shift"
-                    style={{width: '100%', height: '100%', border: 'none'}}
-                    allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
-                    allowFullScreen
-                    title="Jed Dougherty - From Prediction to Tasks A GenAI Shift"
+                  <MuxPlayer
+                    playbackId="oZhtkJScZZuK8pz8R9TYm007lhklotNTz029QmLRZkEu4"
+                    poster="https://aimc-pics-540334252609.s3.us-east-2.amazonaws.com/Jed+Dougherty.png"
+                    metadataVideoTitle="Jed Dougherty - From Prediction to Tasks A GenAI Shift"
+                    streamType="on-demand"
+                    className="w-full h-full"
                   />
                 </div>
                 <p className="text-white/80 text-base mt-3 font-medium">Jed Dougherty on AI Wins</p>
@@ -207,12 +208,12 @@ const AIMasterclassTVSection: React.FC = () => {
               {/* Video Thumbnail 3 - Ayan Bhattacharya */}
               <div className="group cursor-pointer flex-shrink-0 w-full sm:w-[calc(50%-1rem)] snap-center">
                 <div className="relative aspect-video bg-black/20 backdrop-blur-sm rounded-lg border-2 border-nyu-purple/20 hover:border-nyu-purple/40 transition-all duration-300 overflow-hidden">
-                  <iframe
-                    src="https://player.mux.com/khAWi00im02zhGyO1muiWwPoNr027PPVkW17Wpm9mtMySI?metadata-video-title=Ayan+Testimonial+FT+2024&video-title=Ayan+Testimonial+FT+2024"
-                    style={{width: '100%', height: '100%', border: 'none'}}
-                    allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
-                    allowFullScreen
-                    title="Ayan Testimonial FT 2024"
+                  <MuxPlayer
+                    playbackId="khAWi00im02zhGyO1muiWwPoNr027PPVkW17Wpm9mtMySI"
+                    poster="https://aimc-pics-540334252609.s3.us-east-2.amazonaws.com/Ayan+Bhattacharya.png"
+                    metadataVideoTitle="Ayan Testimonial FT 2024"
+                    streamType="on-demand"
+                    className="w-full h-full"
                   />
                 </div>
                 <p className="text-white/80 text-base mt-3 font-medium">Ayan Bhattacharya on Trade-offs</p>
@@ -262,12 +263,12 @@ const AIMasterclassTVSection: React.FC = () => {
               {/* Video Thumbnail 1 - Peggy Smyth */}
               <div className="group cursor-pointer flex-shrink-0 w-full sm:w-[calc(50%-1rem)] snap-center">
                 <div className="relative aspect-video bg-black/20 backdrop-blur-sm rounded-lg border-2 border-nyu-purple/20 hover:border-nyu-purple/40 transition-all duration-300 overflow-hidden">
-                  <iframe
-                    src="https://player.mux.com/g1fQlTUyd4mvNYzJOI4UQEK2S02HJkkc1byQ00iyMffF8?metadata-video-title=Peggy+Smyth+Testimonial&video-title=Peggy+Smyth+Testimonial"
-                    style={{width: '100%', height: '100%', border: 'none'}}
-                    allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
-                    allowFullScreen
-                    title="Peggy Smyth Testimonial"
+                  <MuxPlayer
+                    playbackId="g1fQlTUyd4mvNYzJOI4UQEK2S02HJkkc1byQ00iyMffF8"
+                    poster="https://aimc-pics-540334252609.s3.us-east-2.amazonaws.com/Peggy+Smyth+on+Boardroom+Ethics.png"
+                    metadataVideoTitle="Peggy Smyth Testimonial"
+                    streamType="on-demand"
+                    className="w-full h-full"
                   />
                 </div>
                 <p className="text-white/80 text-base mt-3 font-medium">Peggy Smyth on Boardroom Ethics</p>
@@ -276,12 +277,12 @@ const AIMasterclassTVSection: React.FC = () => {
               {/* Video Thumbnail 2 - Seth Dobrin */}
               <div className="group cursor-pointer flex-shrink-0 w-full sm:w-[calc(50%-1rem)] snap-center">
                 <div className="relative aspect-video bg-black/20 backdrop-blur-sm rounded-lg border-2 border-nyu-purple/20 hover:border-nyu-purple/40 transition-all duration-300 overflow-hidden">
-                  <iframe
-                    src="https://player.mux.com/6KaQVo1WSolzvOrr1oLyP3cAIM5FX00zAY022hay4cga4?metadata-video-title=Seth+Dobrin+AIMC+Snippet+1&video-title=Seth+Dobrin+AIMC+Snippet+1"
-                    style={{width: '100%', height: '100%', border: 'none'}}
-                    allow="accelerometer; gyroscope; autoplay; encrypted-media; picture-in-picture;"
-                    allowFullScreen
-                    title="Seth Dobrin AIMC Snippet 1"
+                  <MuxPlayer
+                    playbackId="6KaQVo1WSolzvOrr1oLyP3cAIM5FX00zAY022hay4cga4"
+                    poster="https://aimc-pics-540334252609.s3.us-east-2.amazonaws.com/Dr.+Seth+Dobrin+on+Governance.png"
+                    metadataVideoTitle="Seth Dobrin AIMC Snippet 1"
+                    streamType="on-demand"
+                    className="w-full h-full"
                   />
                 </div>
                 <p className="text-white/80 text-base mt-3 font-medium">Seth Dobrin on Governance</p>

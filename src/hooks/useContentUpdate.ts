@@ -21,3 +21,5 @@ export const useContentUpdate = (contentType: string, hasContent: boolean) => {
 
 export default useContentUpdate;
 
+
+

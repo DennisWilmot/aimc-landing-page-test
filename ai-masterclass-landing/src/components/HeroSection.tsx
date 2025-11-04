@@ -21,7 +21,7 @@ const HeroSection: React.FC = () => {
           muted
           loop
           playsInline
-          poster="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 1920 1080'%3E%3Crect width='1920' height='1080' fill='%23000'/%3E%3C/svg%3E"
+          poster="https://aimc-pics-540334252609.s3.us-east-2.amazonaws.com/Hero+section+thumbnail.png"
         >
           {/* Placeholder video - replace with actual AI/tech video */}
           <source src="https://commondatastorage.googleapis.com/gtv-videos-bucket/sample/BigBuckBunny.mp4" type="video/mp4" />
