@@ -1,4 +1,5 @@
 import React from 'react';
+import { trackEvent } from '../utils/analytics';
 
 const Footer: React.FC = () => {
   return (
@@ -40,10 +41,10 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-white font-semibold text-lg mb-4">Program</h3>
             <ul className="space-y-2">
-              <li><a href="#social-proof" className="text-white/70 hover:text-white transition-colors text-sm">Alumni</a></li>
-              <li><a href="#instructors" className="text-white/70 hover:text-white transition-colors text-sm">Faculty</a></li>
-              <li><a href="#value-prop" className="text-white/70 hover:text-white transition-colors text-sm">Curriculum</a></li>
-              <li><a href="#faq" className="text-white/70 hover:text-white transition-colors text-sm">FAQ</a></li>
+              <li><a href="#social-proof" className="text-white/70 hover:text-white transition-colors text-sm" onClick={() => trackEvent('footer_link_clicked', { linkText: 'Alumni', destination: 'social-proof' })}>Alumni</a></li>
+              <li><a href="#instructors" className="text-white/70 hover:text-white transition-colors text-sm" onClick={() => trackEvent('footer_link_clicked', { linkText: 'Faculty', destination: 'instructors' })}>Faculty</a></li>
+              <li><a href="#value-prop" className="text-white/70 hover:text-white transition-colors text-sm" onClick={() => trackEvent('footer_link_clicked', { linkText: 'Curriculum', destination: 'value-prop' })}>Curriculum</a></li>
+              <li><a href="#faq" className="text-white/70 hover:text-white transition-colors text-sm" onClick={() => trackEvent('footer_link_clicked', { linkText: 'FAQ', destination: 'faq' })}>FAQ</a></li>
             </ul>
           </div>
 
@@ -51,8 +52,8 @@ const Footer: React.FC = () => {
           <div>
             <h3 className="text-white font-semibold text-lg mb-4">Contact</h3>
             <ul className="space-y-2">
-              <li><a href="mailto:info@aimasterclass.com" className="text-white/70 hover:text-white transition-colors text-sm">info@aimasterclass.com</a></li>
-              <li><a href="tel:+1-555-AI-MASTER" className="text-white/70 hover:text-white transition-colors text-sm">+1 (555) AI-MASTER</a></li>
+              <li><a href="mailto:info@aimasterclass.com" className="text-white/70 hover:text-white transition-colors text-sm" onClick={() => trackEvent('footer_link_clicked', { linkText: 'Email', contactType: 'email' })}>info@aimasterclass.com</a></li>
+              <li><a href="tel:+1-555-AI-MASTER" className="text-white/70 hover:text-white transition-colors text-sm" onClick={() => trackEvent('footer_link_clicked', { linkText: 'Phone', contactType: 'phone' })}>+1 (555) AI-MASTER</a></li>
               <li><span className="text-white/70 text-sm">New York University</span></li>
               <li><span className="text-white/70 text-sm">Executive Education</span></li>
             </ul>
@@ -63,12 +64,12 @@ const Footer: React.FC = () => {
         <div className="mt-12 pt-8 border-t border-white/10">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <div className="text-white/60 text-sm">
-              © 2024 AI Masterclass Executive Education. All rights reserved.
+              © 2025 AI Masterclass Executive Education. All rights reserved.
             </div>
             <div className="flex items-center space-x-6">
-              <a href="#" className="text-white/60 hover:text-white transition-colors text-sm">Privacy Policy</a>
-              <a href="#" className="text-white/60 hover:text-white transition-colors text-sm">Terms of Service</a>
-              <a href="#" className="text-white/60 hover:text-white transition-colors text-sm">Accessibility</a>
+              <a href="#" className="text-white/60 hover:text-white transition-colors text-sm" onClick={(e) => { e.preventDefault(); trackEvent('footer_link_clicked', { linkText: 'Privacy Policy', linkType: 'legal' }); }}>Privacy Policy</a>
+              <a href="#" className="text-white/60 hover:text-white transition-colors text-sm" onClick={(e) => { e.preventDefault(); trackEvent('footer_link_clicked', { linkText: 'Terms of Service', linkType: 'legal' }); }}>Terms of Service</a>
+              <a href="#" className="text-white/60 hover:text-white transition-colors text-sm" onClick={(e) => { e.preventDefault(); trackEvent('footer_link_clicked', { linkText: 'Accessibility', linkType: 'legal' }); }}>Accessibility</a>
             </div>
           </div>
         </div>

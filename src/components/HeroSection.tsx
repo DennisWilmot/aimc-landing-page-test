@@ -1,6 +1,9 @@
 import React, { useEffect, useRef } from 'react';
+import { Link } from 'react-router-dom';
 import MuxPlayer from '@mux/mux-player-react';
 import { initializeSmoothScroll } from '../utils/smoothScroll';
+import { trackEvent } from '../utils/analytics';
+import { useVideoTracking } from '../hooks/useVideoTracking';
 
 const HeroSection: React.FC = () => {
   const videoRef = useRef<HTMLVideoElement>(null);
@@ -8,6 +11,13 @@ const HeroSection: React.FC = () => {
   
   const playbackId = "FQlNEHa3G90117sMdpV7cxXW8FGFZe34S8tEklf1xFDs";
   const posterUrl = "https://aimc-pics-540334252609.s3.us-east-2.amazonaws.com/Hero%20section%20thumbnail.png";
+
+  // Enhanced video tracking
+  const videoTracking = useVideoTracking({
+    videoId: playbackId,
+    videoTitle: "AI Masterclass Hero Video",
+    location: "hero_section",
+  });
 
   useEffect(() => {
     console.log('🎬 HeroSection mounted');
@@ -90,20 +100,19 @@ const HeroSection: React.FC = () => {
         </div>
         
         <div className="hidden md:flex items-center space-x-8">
-          <a href="#social-proof" className="text-white/80 hover:text-white transition-colors">Alumni</a>
-          <a href="#instructors" className="text-white/80 hover:text-white transition-colors">Faculty</a>
-          <a href="#value-prop" className="text-white/80 hover:text-white transition-colors">Program</a>
-          <a href="#faq" className="text-white/80 hover:text-white transition-colors">FAQ</a>
+          <a href="#social-proof" className="text-white/80 hover:text-white transition-colors" onClick={() => trackEvent('nav_link_clicked', { linkText: 'Alumni', destination: 'social-proof' })}>Alumni</a>
+          <a href="#instructors" className="text-white/80 hover:text-white transition-colors" onClick={() => trackEvent('nav_link_clicked', { linkText: 'Faculty', destination: 'instructors' })}>Faculty</a>
+          <a href="#value-prop" className="text-white/80 hover:text-white transition-colors" onClick={() => trackEvent('nav_link_clicked', { linkText: 'Program', destination: 'value-prop' })}>Program</a>
+          <a href="#faq" className="text-white/80 hover:text-white transition-colors" onClick={() => trackEvent('nav_link_clicked', { linkText: 'FAQ', destination: 'faq' })}>FAQ</a>
         </div>
 
-        <a 
-          href="https://learn.aimasterclass.com/course/free-ai-masterclass"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link 
+          to="/course-listing"
           className="bg-nyu-purple hover:bg-nyu-purple/90 text-white px-4 py-1.5 rounded font-medium text-sm transition-colors inline-block text-center"
+          onClick={() => trackEvent('nav_enroll_clicked', { location: 'navbar' })}
         >
           Enroll Now
-        </a>
+        </Link>
       </nav>
 
       {/* Hero Content */}
@@ -119,9 +128,21 @@ const HeroSection: React.FC = () => {
                 metadataVideoTitle="AI Masterclass Vertical Testimonial 2025"
                 streamType="on-demand"
                 className="w-full h-full"
-                onLoadedMetadata={() => console.log('✅ Desktop MuxPlayer metadata loaded')}
+                onLoadedMetadata={(e: any) => {
+                  console.log('✅ Desktop MuxPlayer metadata loaded');
+                  const duration = e.target?.duration || 0;
+                  videoTracking.onLoadedMetadata(duration);
+                }}
                 onCanPlay={() => console.log('✅ Desktop MuxPlayer can play')}
                 onLoadStart={() => console.log('🔄 Desktop MuxPlayer load started')}
+                onPlay={videoTracking.onPlay}
+                onPause={videoTracking.onPause}
+                onEnded={videoTracking.onEnded}
+                onTimeUpdate={(e: any) => {
+                  const currentTime = e.target?.currentTime || 0;
+                  const duration = e.target?.duration || 0;
+                  videoTracking.onTimeUpdate(currentTime, duration);
+                }}
                 onError={(e: any) => console.error('❌ Desktop MuxPlayer error:', e)}
               />
             </div>
@@ -144,14 +165,16 @@ const HeroSection: React.FC = () => {
 
           {/* CTA Button */}
           <div className="flex flex-col sm:flex-row items-center lg:items-start justify-center lg:justify-start animate-slide-up">
-            <a 
-              href="https://learn.aimasterclass.com/course/free-ai-masterclass"
-              target="_blank"
-              rel="noopener noreferrer"
+            <Link
+              to="/course-listing"
               className="w-full max-w-sm sm:w-auto bg-nyu-purple hover:bg-nyu-purple/90 text-white px-6 py-3 rounded font-medium text-base transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-nyu-purple/25 text-center block"
+              onClick={() => trackEvent('hero_cta_clicked', { 
+                buttonText: 'Get Free Course Now',
+                location: 'hero_section' 
+              })}
             >
               Get Free Course Now
-            </a>
+            </Link>
           </div>
 
           {/* Mobile Video - Shows only on mobile */}
@@ -163,9 +186,21 @@ const HeroSection: React.FC = () => {
                 metadataVideoTitle="AI Masterclass Vertical Testimonial 2025"
                 streamType="on-demand"
                 className="w-full h-full"
-                onLoadedMetadata={() => console.log('✅ Mobile MuxPlayer metadata loaded')}
+                onLoadedMetadata={(e: any) => {
+                  console.log('✅ Mobile MuxPlayer metadata loaded');
+                  const duration = e.target?.duration || 0;
+                  videoTracking.onLoadedMetadata(duration);
+                }}
                 onCanPlay={() => console.log('✅ Mobile MuxPlayer can play')}
                 onLoadStart={() => console.log('🔄 Mobile MuxPlayer load started')}
+                onPlay={videoTracking.onPlay}
+                onPause={videoTracking.onPause}
+                onEnded={videoTracking.onEnded}
+                onTimeUpdate={(e: any) => {
+                  const currentTime = e.target?.currentTime || 0;
+                  const duration = e.target?.duration || 0;
+                  videoTracking.onTimeUpdate(currentTime, duration);
+                }}
                 onError={(e: any) => console.error('❌ Mobile MuxPlayer error:', e)}
               />
             </div>

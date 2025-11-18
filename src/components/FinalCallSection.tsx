@@ -1,4 +1,5 @@
 import React from 'react';
+import { trackEvent } from '../utils/analytics';
 
 const FinalCallSection: React.FC = () => {
   return (
@@ -78,6 +79,11 @@ const FinalCallSection: React.FC = () => {
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-block w-full sm:w-auto bg-nyu-purple hover:bg-nyu-purple/90 text-white px-12 py-4 rounded font-medium text-xl transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-nyu-purple/25 text-center"
+                  onClick={() => trackEvent('cta_clicked', {
+                    buttonText: 'SECURE YOUR SPOT NOW',
+                    location: 'final_call_section',
+                    ctaType: 'enroll_now'
+                  })}
                 >
                   SECURE YOUR SPOT NOW
                 </a>

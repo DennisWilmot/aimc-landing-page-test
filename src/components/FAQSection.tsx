@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { trackEvent } from '../utils/analytics';
 
 const FAQSection: React.FC = () => {
   const [openIndex, setOpenIndex] = useState<number | null>(null);
@@ -31,7 +32,16 @@ const FAQSection: React.FC = () => {
   ];
 
   const toggleFAQ = (index: number) => {
+    const isOpening = openIndex !== index;
     setOpenIndex(openIndex === index ? null : index);
+    
+    if (isOpening) {
+      trackEvent('faq_item_clicked', {
+        question: faqs[index].question,
+        index,
+        location: 'faq_section'
+      });
+    }
   };
 
   return (
@@ -86,7 +96,14 @@ const FAQSection: React.FC = () => {
 
       {/* Bottom CTA */}
       <div className="text-center mt-12">
-        <button className="bg-nyu-purple hover:bg-nyu-purple/90 text-white px-8 py-4 rounded font-medium text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-nyu-purple/25">
+        <button 
+          className="bg-nyu-purple hover:bg-nyu-purple/90 text-white px-8 py-4 rounded font-medium text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-nyu-purple/25"
+          onClick={() => trackEvent('cta_clicked', {
+            buttonText: 'Have More Questions?',
+            location: 'faq_section',
+            ctaType: 'contact'
+          })}
+        >
           Have More Questions?
         </button>
       </div>

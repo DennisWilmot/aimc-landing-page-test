@@ -1,4 +1,5 @@
 import React, { useRef } from 'react';
+import { Link } from 'react-router-dom';
 import MuxPlayer from '@mux/mux-player-react';
 
 const AIMasterclassTVSection: React.FC = () => {
@@ -295,14 +296,12 @@ const AIMasterclassTVSection: React.FC = () => {
 
       {/* Bottom CTA */}
       <div className="relative z-10 text-center mt-12">
-        <a 
-          href="https://learn.aimasterclass.com/course/free-ai-masterclass"
-          target="_blank"
-          rel="noopener noreferrer"
+        <Link 
+          to="/course-listing"
           className="inline-block bg-nyu-purple hover:bg-nyu-purple/90 text-white px-8 py-4 rounded font-medium text-lg transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-nyu-purple/25"
         >
           Get Free Course Now
-        </a>
+        </Link>
       </div>
     </section>
   );

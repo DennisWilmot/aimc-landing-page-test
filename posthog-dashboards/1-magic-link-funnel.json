@@ -1,0 +1,220 @@
+{
+  "name": "Magic Link Funnel - Authentication Flow",
+  "description": "Track user conversion through the magic link authentication process",
+  "pinned": true,
+  "items": [
+    {
+      "name": "Complete Magic Link Funnel",
+      "type": "FUNNEL",
+      "description": "End-to-end conversion from landing to course access",
+      "filters": {
+        "events": [
+          {
+            "id": "course_page_viewed",
+            "name": "Course Page Viewed",
+            "type": "events",
+            "order": 0
+          },
+          {
+            "id": "course_email_form_viewed",
+            "name": "Email Form Viewed",
+            "type": "events",
+            "order": 1
+          },
+          {
+            "id": "magic_link_email_submitted",
+            "name": "Email Submitted",
+            "type": "events",
+            "order": 2
+          },
+          {
+            "id": "magic_link_email_opened",
+            "name": "Email Opened",
+            "type": "events",
+            "order": 3
+          },
+          {
+            "id": "magic_link_clicked",
+            "name": "Link Clicked",
+            "type": "events",
+            "order": 4
+          },
+          {
+            "id": "magic_link_verified",
+            "name": "Token Verified",
+            "type": "events",
+            "order": 5
+          },
+          {
+            "id": "course_content_accessed",
+            "name": "Course Accessed",
+            "type": "events",
+            "order": 6
+          }
+        ],
+        "insight": "FUNNELS",
+        "funnel_window_interval": 14,
+        "funnel_window_interval_unit": "day",
+        "breakdown_type": "event"
+      }
+    },
+    {
+      "name": "Email-to-Open Rate",
+      "type": "TREND",
+      "description": "Track how many users open the magic link email",
+      "filters": {
+        "events": [
+          {
+            "id": "magic_link_email_sent",
+            "name": "Emails Sent",
+            "math": "total"
+          },
+          {
+            "id": "magic_link_email_opened",
+            "name": "Emails Opened",
+            "math": "total"
+          }
+        ],
+        "insight": "TRENDS",
+        "interval": "day",
+        "display": "ActionsLineGraph"
+      }
+    },
+    {
+      "name": "Click-Through Rate",
+      "type": "TREND",
+      "description": "Users who click the magic link after opening",
+      "filters": {
+        "events": [
+          {
+            "id": "magic_link_email_opened",
+            "name": "Email Opened",
+            "math": "total"
+          },
+          {
+            "id": "magic_link_clicked",
+            "name": "Link Clicked",
+            "math": "total"
+          }
+        ],
+        "insight": "TRENDS",
+        "interval": "day",
+        "display": "ActionsLineGraph"
+      }
+    },
+    {
+      "name": "Verification Success Rate",
+      "type": "TREND",
+      "description": "Successful token verifications vs failures",
+      "filters": {
+        "events": [
+          {
+            "id": "auth_verification_success",
+            "name": "Verified Successfully",
+            "math": "total"
+          },
+          {
+            "id": "auth_verification_failed",
+            "name": "Verification Failed",
+            "math": "total"
+          }
+        ],
+        "insight": "TRENDS",
+        "interval": "day",
+        "display": "ActionsLineGraph"
+      }
+    },
+    {
+      "name": "Top Drop-off Points",
+      "type": "FUNNEL",
+      "description": "Where are users dropping off most?",
+      "filters": {
+        "events": [
+          {
+            "id": "course_email_form_viewed",
+            "name": "Email Form Viewed",
+            "type": "events",
+            "order": 0
+          },
+          {
+            "id": "magic_link_email_submitted",
+            "name": "Email Submitted",
+            "type": "events",
+            "order": 1
+          }
+        ],
+        "insight": "FUNNELS",
+        "funnel_window_interval": 1,
+        "funnel_window_interval_unit": "hour",
+        "breakdown_type": "event"
+      }
+    },
+    {
+      "name": "Time to Complete Funnel",
+      "type": "TREND",
+      "description": "Average time from page view to course access",
+      "filters": {
+        "events": [
+          {
+            "id": "course_page_viewed",
+            "name": "Started",
+            "math": "total"
+          },
+          {
+            "id": "course_content_accessed",
+            "name": "Completed",
+            "math": "total"
+          }
+        ],
+        "insight": "TRENDS",
+        "interval": "day"
+      }
+    },
+    {
+      "name": "Abandonment Rate",
+      "type": "TREND",
+      "description": "Users who abandoned the form without submitting",
+      "filters": {
+        "events": [
+          {
+            "id": "magic_link_abandonment",
+            "name": "Abandoned Form",
+            "math": "total"
+          },
+          {
+            "id": "magic_link_inactivity",
+            "name": "Inactive Users",
+            "math": "total"
+          }
+        ],
+        "insight": "TRENDS",
+        "interval": "day",
+        "display": "ActionsLineGraph"
+      }
+    },
+    {
+      "name": "Email Delivery Status",
+      "type": "TREND",
+      "description": "Track successful vs failed email sends",
+      "filters": {
+        "events": [
+          {
+            "id": "magic_link_email_sent",
+            "name": "Sent Successfully",
+            "math": "total"
+          },
+          {
+            "id": "magic_link_email_failed",
+            "name": "Failed to Send",
+            "math": "total"
+          }
+        ],
+        "insight": "TRENDS",
+        "interval": "day",
+        "display": "ActionsLineGraph"
+      }
+    }
+  ],
+  "tags": ["authentication", "magic-link", "funnel", "conversion"]
+}
+

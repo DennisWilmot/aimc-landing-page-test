@@ -1,0 +1,244 @@
+{
+  "name": "Course Engagement Dashboard",
+  "description": "Monitor user engagement and progress through course modules",
+  "pinned": true,
+  "items": [
+    {
+      "name": "Active Users (Last 7 Days)",
+      "type": "TREND",
+      "description": "Unique users who accessed course content",
+      "filters": {
+        "events": [
+          {
+            "id": "course_content_accessed",
+            "name": "Active Users",
+            "math": "dau"
+          }
+        ],
+        "insight": "TRENDS",
+        "interval": "day",
+        "date_from": "-7d",
+        "display": "ActionsLineGraph"
+      }
+    },
+    {
+      "name": "Module Completion Funnel",
+      "type": "FUNNEL",
+      "description": "Track progression through all 5 modules",
+      "filters": {
+        "events": [
+          {
+            "id": "course_module_started",
+            "name": "Module 1 Started",
+            "type": "events",
+            "order": 0,
+            "properties": [
+              {
+                "key": "module_id",
+                "value": "module-1",
+                "operator": "exact"
+              }
+            ]
+          },
+          {
+            "id": "course_module_completed",
+            "name": "Module 1 Completed",
+            "type": "events",
+            "order": 1,
+            "properties": [
+              {
+                "key": "module_id",
+                "value": "module-1",
+                "operator": "exact"
+              }
+            ]
+          },
+          {
+            "id": "course_module_started",
+            "name": "Module 2 Started",
+            "type": "events",
+            "order": 2,
+            "properties": [
+              {
+                "key": "module_id",
+                "value": "module-2",
+                "operator": "exact"
+              }
+            ]
+          },
+          {
+            "id": "course_module_completed",
+            "name": "Module 2 Completed",
+            "type": "events",
+            "order": 3,
+            "properties": [
+              {
+                "key": "module_id",
+                "value": "module-2",
+                "operator": "exact"
+              }
+            ]
+          }
+        ],
+        "insight": "FUNNELS",
+        "funnel_window_interval": 30,
+        "funnel_window_interval_unit": "day"
+      }
+    },
+    {
+      "name": "Most Popular Modules",
+      "type": "TREND",
+      "description": "Which modules are viewed most often",
+      "filters": {
+        "events": [
+          {
+            "id": "course_module_started",
+            "name": "Module Started",
+            "math": "total"
+          }
+        ],
+        "breakdown": "module_id",
+        "breakdown_type": "event",
+        "insight": "TRENDS",
+        "interval": "day",
+        "display": "ActionsBar"
+      }
+    },
+    {
+      "name": "Module Completion Rate by Module",
+      "type": "TREND",
+      "description": "Compare completion rates across all modules",
+      "filters": {
+        "events": [
+          {
+            "id": "course_module_completed",
+            "name": "Modules Completed",
+            "math": "total"
+          }
+        ],
+        "breakdown": "module_id",
+        "breakdown_type": "event",
+        "insight": "TRENDS",
+        "interval": "day",
+        "display": "ActionsBar"
+      }
+    },
+    {
+      "name": "Average Modules per User",
+      "type": "TREND",
+      "description": "How many modules does each user complete on average",
+      "filters": {
+        "events": [
+          {
+            "id": "course_module_completed",
+            "name": "Completed Modules",
+            "math": "avg"
+          }
+        ],
+        "insight": "TRENDS",
+        "interval": "day",
+        "display": "ActionsLineGraph"
+      }
+    },
+    {
+      "name": "Course Completion Rate",
+      "type": "FUNNEL",
+      "description": "Users who complete all 5 modules",
+      "filters": {
+        "events": [
+          {
+            "id": "course_content_accessed",
+            "name": "Started Course",
+            "type": "events",
+            "order": 0
+          },
+          {
+            "id": "course_module_completed",
+            "name": "Completed Module 1",
+            "type": "events",
+            "order": 1,
+            "properties": [
+              {
+                "key": "module_id",
+                "value": "module-1",
+                "operator": "exact"
+              }
+            ]
+          },
+          {
+            "id": "course_module_completed",
+            "name": "Completed Module 5",
+            "type": "events",
+            "order": 2,
+            "properties": [
+              {
+                "key": "module_id",
+                "value": "module-5",
+                "operator": "exact"
+              }
+            ]
+          }
+        ],
+        "insight": "FUNNELS",
+        "funnel_window_interval": 30,
+        "funnel_window_interval_unit": "day"
+      }
+    },
+    {
+      "name": "User Retention (Day 1, 7, 14, 30)",
+      "type": "RETENTION",
+      "description": "How many users return to the course",
+      "filters": {
+        "events": [
+          {
+            "id": "course_content_accessed",
+            "name": "Accessed Course",
+            "type": "events"
+          }
+        ],
+        "insight": "RETENTION",
+        "retention_type": "retention_first_time",
+        "total_intervals": 30
+      }
+    },
+    {
+      "name": "Daily Module Completions",
+      "type": "TREND",
+      "description": "Track daily module completion activity",
+      "filters": {
+        "events": [
+          {
+            "id": "course_module_completed",
+            "name": "Modules Completed",
+            "math": "total"
+          }
+        ],
+        "insight": "TRENDS",
+        "interval": "day",
+        "date_from": "-30d",
+        "display": "ActionsLineGraph"
+      }
+    },
+    {
+      "name": "New vs Returning Users",
+      "type": "TREND",
+      "description": "Track new course enrollments vs returning users",
+      "filters": {
+        "events": [
+          {
+            "id": "course_content_accessed",
+            "name": "Course Accessed",
+            "math": "total"
+          }
+        ],
+        "insight": "TRENDS",
+        "interval": "day",
+        "display": "ActionsLineGraph",
+        "breakdown": "$is_first_time",
+        "breakdown_type": "person"
+      }
+    }
+  ],
+  "tags": ["course", "engagement", "completion", "modules"]
+}
+

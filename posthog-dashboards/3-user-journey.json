@@ -1,0 +1,188 @@
+{
+  "name": "User Journey & Behavior Analytics",
+  "description": "Deep insights into user behavior with session recordings and path analysis",
+  "pinned": true,
+  "items": [
+    {
+      "name": "User Path Analysis",
+      "type": "PATHS",
+      "description": "Visualize common user journeys through the application",
+      "filters": {
+        "insight": "PATHS",
+        "include_event_types": ["$pageview", "custom_event"],
+        "start_point": "course_page_viewed",
+        "path_type": "$pageview"
+      }
+    },
+    {
+      "name": "Campaign Performance (UTM Tracking)",
+      "type": "TREND",
+      "description": "Track performance by campaign source",
+      "filters": {
+        "events": [
+          {
+            "id": "course_content_accessed",
+            "name": "Course Access",
+            "math": "total"
+          }
+        ],
+        "breakdown": "utm_campaign",
+        "breakdown_type": "event",
+        "insight": "TRENDS",
+        "interval": "day",
+        "display": "ActionsBar"
+      }
+    },
+    {
+      "name": "Traffic Source Analysis",
+      "type": "TREND",
+      "description": "Compare different traffic sources (utm_source)",
+      "filters": {
+        "events": [
+          {
+            "id": "magic_link_clicked",
+            "name": "Magic Link Clicks",
+            "math": "total"
+          }
+        ],
+        "breakdown": "utm_source",
+        "breakdown_type": "event",
+        "insight": "TRENDS",
+        "interval": "day",
+        "display": "WorldMap"
+      }
+    },
+    {
+      "name": "Page Performance Metrics",
+      "type": "TREND",
+      "description": "Track page load times and performance",
+      "filters": {
+        "events": [
+          {
+            "id": "magic_link_page_performance",
+            "name": "Page Performance",
+            "math": "avg",
+            "math_property": "load_time"
+          }
+        ],
+        "insight": "TRENDS",
+        "interval": "day",
+        "display": "ActionsLineGraph"
+      }
+    },
+    {
+      "name": "User Engagement Time",
+      "type": "TREND",
+      "description": "Average time users spend on course pages",
+      "filters": {
+        "events": [
+          {
+            "id": "course_page_viewed",
+            "name": "Page Views",
+            "math": "avg",
+            "math_property": "time_on_page"
+          }
+        ],
+        "insight": "TRENDS",
+        "interval": "day",
+        "display": "ActionsLineGraph"
+      }
+    },
+    {
+      "name": "Scroll Depth Analysis",
+      "type": "TREND",
+      "description": "How far do users scroll on the course page",
+      "filters": {
+        "events": [
+          {
+            "id": "course_page_viewed",
+            "name": "Page Views",
+            "math": "avg",
+            "math_property": "max_scroll_depth"
+          }
+        ],
+        "insight": "TRENDS",
+        "interval": "day",
+        "display": "ActionsLineGraph"
+      }
+    },
+    {
+      "name": "User Inactivity Events",
+      "type": "TREND",
+      "description": "Track when users become inactive",
+      "filters": {
+        "events": [
+          {
+            "id": "magic_link_inactivity",
+            "name": "Inactive Users",
+            "math": "total"
+          }
+        ],
+        "insight": "TRENDS",
+        "interval": "day",
+        "display": "ActionsLineGraph"
+      }
+    },
+    {
+      "name": "Session Duration Distribution",
+      "type": "TREND",
+      "description": "Distribution of session lengths",
+      "filters": {
+        "events": [
+          {
+            "id": "$pageview",
+            "name": "Session Duration",
+            "math": "p90",
+            "math_property": "$session_duration"
+          }
+        ],
+        "insight": "TRENDS",
+        "interval": "day",
+        "display": "ActionsLineGraph"
+      }
+    },
+    {
+      "name": "Browser & Device Breakdown",
+      "type": "TREND",
+      "description": "Understand what devices users are on",
+      "filters": {
+        "events": [
+          {
+            "id": "course_page_viewed",
+            "name": "Page Views",
+            "math": "total"
+          }
+        ],
+        "breakdown": "$browser",
+        "breakdown_type": "person",
+        "insight": "TRENDS",
+        "interval": "day",
+        "display": "ActionsBar"
+      }
+    },
+    {
+      "name": "Email Open to Click Time",
+      "type": "TREND",
+      "description": "How long between opening email and clicking link",
+      "filters": {
+        "events": [
+          {
+            "id": "magic_link_email_opened",
+            "name": "Email Opened",
+            "math": "total"
+          },
+          {
+            "id": "magic_link_clicked",
+            "name": "Link Clicked",
+            "math": "total"
+          }
+        ],
+        "insight": "TRENDS",
+        "interval": "day",
+        "formula": "B - A"
+      }
+    }
+  ],
+  "tags": ["behavior", "journey", "analytics", "utm", "performance"]
+}
+

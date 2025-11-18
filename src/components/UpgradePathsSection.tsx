@@ -1,9 +1,17 @@
 import React, { useState } from 'react';
+import { trackEvent } from '../utils/analytics';
 
 const UpgradePathsSection: React.FC = () => {
   const [showSuccess, setShowSuccess] = useState(false);
 
   const handleNotifyMe = () => {
+    trackEvent('cta_clicked', {
+      buttonText: 'Notify Me When Live',
+      location: 'upgrade_paths_section',
+      ctaType: 'notify_me',
+      programType: 'full_online_masterclass'
+    });
+    
     setShowSuccess(true);
     // Reset after 5 seconds
     setTimeout(() => setShowSuccess(false), 5000);
@@ -90,6 +98,12 @@ const UpgradePathsSection: React.FC = () => {
             target="_blank" 
             rel="noopener noreferrer"
             className="inline-block bg-nyu-purple hover:bg-nyu-purple/90 text-white px-6 py-3 rounded font-medium transition-all duration-300 transform hover:scale-105 shadow-lg hover:shadow-nyu-purple/25 relative z-10"
+            onClick={() => trackEvent('cta_clicked', {
+              buttonText: 'Explore In-Person',
+              location: 'upgrade_paths_section',
+              ctaType: 'explore_program',
+              programType: 'intensive_in_person'
+            })}
           >
             Explore In-Person →
           </a>
